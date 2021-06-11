@@ -2,13 +2,8 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include "util.h"
+#include "error.h"
 #include "libft.h"
-
-void	exit_with_error(int exit_code)
-{
-	write(2, "Error\n", 6);
-	exit(exit_code);
-}
 
 void	*lmt_alloc(size_t size)
 {
