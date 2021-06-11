@@ -1,4 +1,0 @@
-/util/util.[ch]
-	lmt_alloc()
-	lmt_read()
-	read_line()
