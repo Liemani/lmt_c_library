@@ -14,12 +14,13 @@ typedef struct	s_read_info
 	char		buffer[READ_BUFFER_SIZE + 1];
 	ssize_t		number_of_bytes_read;
 	char		*p_cursor;
+	char		*p_line_read;
 }				t_read_info;
 
 t_read_info		*alloc_read_info(void);
 void			init_read_info(t_rad_info *p_info, int fd);
 t_read_info		*new_read_info(int fd);
 void			free_read_info(t_rad_info *p_info);
-int				get_line(t_read_info *p_read_info);
+int				get_line(t_read_info *p_read_info, char **pp_line);
 
 #endif
