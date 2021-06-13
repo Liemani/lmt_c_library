@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   util.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
+/*   Updated: 2021/06/13 15:55:58 by jeonpark         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -18,12 +30,12 @@ void	*lmt_alloc(size_t size)
 
 ssize_t	lmt_read(int fd, void *buffer, size_t size)
 {
-	ssize_t	number_of_bytes_read;
+	ssize_t	reads_len;
 
-	number_of_bytes_read = read(fd, buffer, size);
-	if (number_of_bytes_read == -1)
+	reads_len = read(fd, buffer, size);
+	if (reads_len == -1)
 		exit_with_error(READ_ERROR);
-	return (number_of_bytes_read);
+	return (reads_len);
 }
 
 ssize_t	lmt_write(int fd, const char *string)
@@ -54,7 +66,7 @@ char	*lmt_realloc_string(char *string, size_t size)
 		return (duplicated_string);
 	}
 	length_of_string = ft_strlen(string);
-	size_to_copy = length_of_string <= size - 1 ? length_of_string : size - 1 ;
+	size_to_copy = length_of_string <= size - 1 ? length_of_string : size - 1;
 	ft_memcpy(duplicated_string, string, size_to_copy);
 	free(string);
 	duplicated_string[size_to_copy] = '\0';
