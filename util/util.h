@@ -6,13 +6,15 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/06/14 21:23:10 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/06/14 21:38:30 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef UTIL_H
 # define UTIL_H
 
+# include <stdlib.h>
+# include <sys/types.h>
 # include "error.h"
 # include "bool.h"
 

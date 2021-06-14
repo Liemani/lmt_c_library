@@ -6,10 +6,11 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 20:40:38 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/06/14 21:15:10 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/06/14 21:37:00 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <limits.h>
 #include "util.h"
 
 static int	is_digit(char ch)
