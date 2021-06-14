@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/06/14 23:35:31 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/06/15 23:21:54 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ void	*lmt_alloc(size_t size)
 	return (p_address);
 }
 
-<<<<<<< HEAD
 ssize_t	lmt_read(int fd, void *buffer, size_t size)
 {
 	ssize_t	reads_len;
@@ -38,17 +37,21 @@ ssize_t	lmt_read(int fd, void *buffer, size_t size)
 	return (reads_len);
 }
 
-ssize_t	lmt_write(int fd, const char *string)
-=======
-void	lmt_put_ch()
+void	lmt_put_ch(const char ch)
 {
+	ssize_t	result;
+
+	result = write(1, &ch, 1);
+	if (result == -1)
+		lmt_exit(WRITE_ERROR, "");
 }
 
 ssize_t	lmt_write(const char *string)
->>>>>>> ad14cab... main_modify_error_to_lmt_exit
 {
 	ssize_t	number_of_bytes_write;
 
+	if (string == NULL)
+		return (0);
 	number_of_bytes_write = write(1, string, lmt_strlen(string));
 	if (number_of_bytes_write == -1)
 		lmt_exit(WRITE_ERROR, "");
