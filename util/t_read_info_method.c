@@ -6,14 +6,13 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/06/13 16:36:27 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/06/14 22:31:44 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "t_read_info.h"
 #include "util.h"
-#include "libft.h"
 
 /*
 **	Return value:

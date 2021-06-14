@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/06/14 22:02:42 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/06/14 22:31:54 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <sys/types.h>
+# include "t_read_info.h"
 # include "error.h"
 # include "bool.h"
 
@@ -28,6 +29,5 @@ char	*lmt_realloc_string(char *string, size_t size);
 int		lmt_atoui(char *string, unsigned int *p_result);
 int		lmt_is_space(const char ch);
 int		lmt_isdigit(const char ch);
-size_t	lmt_strlen(const char *string);
 
 #endif

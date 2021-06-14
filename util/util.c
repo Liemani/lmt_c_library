@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/06/14 21:27:58 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/06/14 22:28:58 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <sys/types.h>
 #include "util.h"
 #include "error.h"
-#include "libft.h"
+#include "lmt_unsafe.h"
 
 void	*lmt_alloc(size_t size)
 {
@@ -41,7 +41,7 @@ ssize_t	lmt_write(int fd, const char *string)
 {
 	ssize_t	number_of_bytes_write;
 
-	number_of_bytes_write = write(fd, string, ft_strlen(string));
+	number_of_bytes_write = write(fd, string, lmt_strlen(string));
 	if (number_of_bytes_write == -1)
 		exit_with_error(WRITE_ERROR);
 	return (number_of_bytes_write);
@@ -64,9 +64,9 @@ char	*lmt_realloc_string(char *string, size_t size)
 		*duplicated_string = '\0';
 		return (duplicated_string);
 	}
-	length_of_string = ft_strlen(string);
+	length_of_string = lmt_strlen(string);
 	size_to_copy = length_of_string <= size - 1 ? length_of_string : size - 1;
-	ft_memcpy(duplicated_string, string, size_to_copy);
+	lmt_memcpy(duplicated_string, string, size_to_copy);
 	free(string);
 	duplicated_string[size_to_copy] = '\0';
 	return (duplicated_string);

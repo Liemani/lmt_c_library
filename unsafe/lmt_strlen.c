@@ -6,12 +6,12 @@
 /*   By: jeonpark <jeonpark@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 22:00:57 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/06/14 22:02:31 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/06/14 22:30:26 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include "util.h"
+#include <stdlib.h>
+#include "lmt_unsafe.h"
 
 size_t	lmt_strlen(const char *string)
 {
