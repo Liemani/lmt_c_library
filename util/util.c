@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/06/14 22:28:58 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/06/14 23:35:31 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include "util.h"
-#include "error.h"
+#include "lmt_exit.h"
 #include "lmt_unsafe.h"
 
 void	*lmt_alloc(size_t size)
@@ -23,10 +23,11 @@ void	*lmt_alloc(size_t size)
 
 	p_address = malloc(size);
 	if (p_address == NULL)
-		exit_with_error(ALLOCATION_ERROR);
+		lmt_exit(ALLOCATION_ERROR, "");
 	return (p_address);
 }
 
+<<<<<<< HEAD
 ssize_t	lmt_read(int fd, void *buffer, size_t size)
 {
 	ssize_t	reads_len;
@@ -38,12 +39,19 @@ ssize_t	lmt_read(int fd, void *buffer, size_t size)
 }
 
 ssize_t	lmt_write(int fd, const char *string)
+=======
+void	lmt_put_ch()
+{
+}
+
+ssize_t	lmt_write(const char *string)
+>>>>>>> ad14cab... main_modify_error_to_lmt_exit
 {
 	ssize_t	number_of_bytes_write;
 
-	number_of_bytes_write = write(fd, string, lmt_strlen(string));
+	number_of_bytes_write = write(1, string, lmt_strlen(string));
 	if (number_of_bytes_write == -1)
-		exit_with_error(WRITE_ERROR);
+		lmt_exit(WRITE_ERROR, "");
 	return (number_of_bytes_write);
 }
 

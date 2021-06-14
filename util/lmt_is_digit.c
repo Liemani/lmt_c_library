@@ -6,13 +6,13 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 21:58:44 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/06/14 22:43:05 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/06/14 23:00:20 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "util.h"
 
-int	lmt_isdigit(const char ch)
+int	lmt_is_digit(const char ch)
 {
 	return ('0' <= ch && ch <= '9');
 }

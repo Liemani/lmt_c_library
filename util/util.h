@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/06/14 22:50:47 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/06/14 23:35:58 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdlib.h>
 # include <sys/types.h>
 # include "t_read_info.h"
-# include "error.h"
+# include "lmt_exit.h"
 # include "bool.h"
 
 # define PARSE_SUCCESSFUL	0
@@ -27,6 +27,7 @@ ssize_t	lmt_read(int fd, void *buffer, size_t size);
 ssize_t	lmt_write(int fd, const char *string);
 char	*lmt_realloc_string(char *string, size_t size);
 int		lmt_atoui(char *string, unsigned int *p_result);
+int		lmt_atoi(char *string, int *p_result);
 int		lmt_is_space(const char ch);
 int		lmt_is_digit(const char ch);
 
