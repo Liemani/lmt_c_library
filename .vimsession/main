@@ -10,14 +10,16 @@ nnoremap GT gT
 map K <Nop>
 vmap gx <Plug>NetrwBrowseXVis
 nmap gx <Plug>NetrwBrowseX
+nnoremap <F12> ggV}zf
 vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(netrw#GX(),netrw#CheckIfRemote(netrw#GX()))
-nnoremap <F6> :set number!
+map <F1> :Stdheader
+nnoremap <F7> /:vimgrep  ##:copen
+nnoremap <F6> :args `find . -iname \*.\[hc\]`
 nnoremap <F5> :e
 nnoremap <F4> :qh
 nnoremap <F3> :mksession! $git_root/.vimsession/
 nnoremap <F2> :e .
-nnoremap <F1> :Stdheader
 vmap <BS> "-d
 vmap <D-x> "*d
 vmap <D-c> "*y
@@ -59,27 +61,29 @@ let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/programming/git/seoul42_project/util
+cd ~/programming/git/main/util
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
 argglobal
 %argdel
-$argadd error.c
-edit error.c
+$argadd util.h
+edit util.c
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
-1wincmd h
 wincmd _ | wincmd |
-split
-1wincmd k
+vsplit
+2wincmd h
 wincmd w
 wincmd w
 wincmd _ | wincmd |
 split
-1wincmd k
+wincmd _ | wincmd |
+split
+2wincmd k
+wincmd w
 wincmd w
 set nosplitbelow
 set nosplitright
@@ -88,14 +92,14 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 54 + 55) / 111)
-exe 'vert 1resize ' . ((&columns * 155 + 155) / 311)
-exe '2resize ' . ((&lines * 54 + 55) / 111)
-exe 'vert 2resize ' . ((&columns * 155 + 155) / 311)
-exe '3resize ' . ((&lines * 54 + 55) / 111)
-exe 'vert 3resize ' . ((&columns * 155 + 155) / 311)
-exe '4resize ' . ((&lines * 54 + 55) / 111)
-exe 'vert 4resize ' . ((&columns * 155 + 155) / 311)
+exe 'vert 1resize ' . ((&columns * 67 + 102) / 204)
+exe 'vert 2resize ' . ((&columns * 68 + 102) / 204)
+exe '3resize ' . ((&lines * 36 + 55) / 111)
+exe 'vert 3resize ' . ((&columns * 67 + 102) / 204)
+exe '4resize ' . ((&lines * 36 + 55) / 111)
+exe 'vert 4resize ' . ((&columns * 67 + 102) / 204)
+exe '5resize ' . ((&lines * 35 + 55) / 111)
+exe 'vert 5resize ' . ((&columns * 67 + 102) / 204)
 argglobal
 setlocal autoindent
 setlocal backupcopy=
@@ -211,16 +215,17 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-6,9fold
-let s:l = 6 - ((5 * winheight(0) + 27) / 54)
+1,12fold
+let s:l = 1 - ((0 * winheight(0) + 54) / 109)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-6
+1
 normal! 0
+lcd ~/programming/git/main/util
 wincmd w
 argglobal
-if bufexists("util.c") | buffer util.c | else | edit util.c | endif
+if bufexists("~/programming/git/main/util/lmt_atoui.c") | buffer ~/programming/git/main/util/lmt_atoui.c | else | edit ~/programming/git/main/util/lmt_atoui.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -335,20 +340,17 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-9,17fold
-20,27fold
-30,37fold
-40,62fold
-let s:l = 5 - ((4 * winheight(0) + 27) / 54)
+1,12fold
+let s:l = 1 - ((0 * winheight(0) + 54) / 109)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-5
-normal! 018|
-lcd ~/programming/git/seoul42_project/util
+1
+normal! 0
+lcd ~/programming/git/main/util
 wincmd w
 argglobal
-if bufexists("~/programming/git/seoul42_project/util/error.h") | buffer ~/programming/git/seoul42_project/util/error.h | else | edit ~/programming/git/seoul42_project/util/error.h | endif
+if bufexists("~/programming/git/main/util/util.h") | buffer ~/programming/git/main/util/util.h | else | edit ~/programming/git/main/util/util.h | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -463,16 +465,16 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 4 - ((3 * winheight(0) + 27) / 54)
+1,12fold
+let s:l = 1 - ((0 * winheight(0) + 18) / 36)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-4
+1
 normal! 0
-lcd ~/programming/git/seoul42_project/util
 wincmd w
 argglobal
-if bufexists("~/programming/git/seoul42_project/util/util.h") | buffer ~/programming/git/seoul42_project/util/util.h | else | edit ~/programming/git/seoul42_project/util/util.h | endif
+if bufexists("~/programming/git/main/util/error.h") | buffer ~/programming/git/main/util/error.h | else | edit ~/programming/git/main/util/error.h | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -587,29 +589,158 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 4 - ((3 * winheight(0) + 27) / 54)
+1,12fold
+let s:l = 1 - ((0 * winheight(0) + 18) / 36)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-4
+1
 normal! 0
-lcd ~/programming/git/seoul42_project/util
+lcd ~/programming/git/main/util
 wincmd w
-3wincmd w
-exe '1resize ' . ((&lines * 54 + 55) / 111)
-exe 'vert 1resize ' . ((&columns * 155 + 155) / 311)
-exe '2resize ' . ((&lines * 54 + 55) / 111)
-exe 'vert 2resize ' . ((&columns * 155 + 155) / 311)
-exe '3resize ' . ((&lines * 54 + 55) / 111)
-exe 'vert 3resize ' . ((&columns * 155 + 155) / 311)
-exe '4resize ' . ((&lines * 54 + 55) / 111)
-exe 'vert 4resize ' . ((&columns * 155 + 155) / 311)
+argglobal
+if bufexists("~/programming/git/main/util/bool.h") | buffer ~/programming/git/main/util/bool.h | else | edit ~/programming/git/main/util/bool.h | endif
+setlocal autoindent
+setlocal backupcopy=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal cindent
+setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
+setlocal commentstring=/*%s*/
+setlocal complete=.,w,b,u,t,i
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal cursorlineopt=both
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal noexpandtab
+if &filetype != 'cpp'
+setlocal filetype=cpp
+endif
+setlocal fixendofline
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=croql
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatprg=
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=
+setlocal includeexpr=
+setlocal indentexpr=
+setlocal indentkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal nolist
+setlocal makeencoding=
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=bin,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=ccomplete#Complete
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal noscrollbind
+setlocal scrolloff=-1
+setlocal shiftwidth=4
+setlocal noshortname
+setlocal showbreak=
+setlocal sidescrolloff=-1
+setlocal signcolumn=auto
+setlocal smartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'cpp'
+setlocal syntax=cpp
+endif
+setlocal tabstop=4
+setlocal tagcase=
+setlocal tagfunc=
+setlocal tags=
+setlocal termwinkey=
+setlocal termwinscroll=10000
+setlocal termwinsize=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal wincolor=
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+silent! normal! zE
+1,12fold
+let s:l = 1 - ((0 * winheight(0) + 17) / 35)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+lcd ~/programming/git/main/util
+wincmd w
+5wincmd w
+exe 'vert 1resize ' . ((&columns * 67 + 102) / 204)
+exe 'vert 2resize ' . ((&columns * 68 + 102) / 204)
+exe '3resize ' . ((&lines * 36 + 55) / 111)
+exe 'vert 3resize ' . ((&columns * 67 + 102) / 204)
+exe '4resize ' . ((&lines * 36 + 55) / 111)
+exe 'vert 4resize ' . ((&columns * 67 + 102) / 204)
+exe '5resize ' . ((&lines * 35 + 55) / 111)
+exe 'vert 5resize ' . ((&columns * 67 + 102) / 204)
 tabnext 1
-badd +1 ~/programming/git/seoul42_project/util/error.c
-badd +1 ~/programming/git/seoul42_project/util
-badd +0 ~/programming/git/seoul42_project/util/error.h
-badd +0 ~/programming/git/seoul42_project/util/util.h
-badd +0 ~/programming/git/seoul42_project/util/util.c
+badd +2 ~/programming/git/main/util/util.c
+badd +1 ~/programming/git/main/util/util.h
+badd +0 ~/programming/git/main/util/lmt_atoui.c
+badd +1 ~/programming/git/main/util/error.h
+badd +2 ~/programming/git/main/util/bool.h
+badd +1 ~/programming/git/main/util
+badd +16 ~/programming/git/main/util/parse.h
+badd +26 ~/programming/git/main/util/parse.c
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif

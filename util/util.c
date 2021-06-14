@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/06/13 15:55:58 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/06/14 21:27:58 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ void	*lmt_alloc(size_t size)
 	p_address = malloc(size);
 	if (p_address == NULL)
 		exit_with_error(ALLOCATION_ERROR);
-	else
-		return (p_address);
+	return (p_address);
 }
 
 ssize_t	lmt_read(int fd, void *buffer, size_t size)
