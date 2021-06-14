@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 20:40:38 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/06/14 21:59:53 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/06/14 22:48:45 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int			lmt_atoui(char *string, unsigned int *p_result)
 	while (lmt_is_digit(*string))
 	{
 		result = result * 10 + (*string - '0');
-		if (result >= UINT_MAX)
+		if (result > UINT_MAX)
 		{
 			*p_result = result;
 			return (PARSE_FAIL);
