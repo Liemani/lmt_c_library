@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/06/14 21:38:30 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/06/14 21:49:56 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ ssize_t	lmt_read(int fd, void *buffer, size_t size);
 ssize_t	lmt_write(int fd, const char *string);
 char	*lmt_realloc_string(char *string, size_t size);
 int		lmt_atoui(char *string, unsigned int *p_result);
+int		lmt_is_space(const char ch);
 
 #endif
