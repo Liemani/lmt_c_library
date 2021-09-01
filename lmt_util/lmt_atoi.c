@@ -6,23 +6,33 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 21:43:14 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/06/14 22:49:32 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/09/18 13:59:17 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <limits.h>
-#include "util.h"
+#include "lmt_util.h"
 
-int			lmt_atoi(char *string, int *p_result)
+int	lmt_atoi(char *string, int *p_result)
 {
 	int		sign;
 	long	result;
 
 	if (*string == '\0')
-		return (PARSE_FAIL);
+		return (PARSE_FAILURE);
 	while (lmt_is_space(*string))
 		++string;
-	sign = (*string == '-' ? -1 : 1);
+	if (*string == '-')
+	{
+		sign = -1;
+		++string;
+		if (lmt_is_digit(*string))
+			return (PARSE_FAILURE);
+	}
+	else
+	{
+		sign = 1;
+	}
 	if (sign == -1 || *string == '+')
 		++string;
 	while (*string == '0')
@@ -32,12 +42,11 @@ int			lmt_atoi(char *string, int *p_result)
 	{
 		result = result * 10 + (*string - '0');
 		if (result > INT_MAX)
-		{
-			*p_result = sign * result;
-			return (PARSE_FAIL);
-		}
+			return (PARSE_FAILURE);
 		++string;
 	}
 	*p_result = sign * result;
-	return (*string == '\0' ? PARSE_SUCCESSFUL : PARSE_FAIL);
+	if (*string == '\0')
+		return (PARSE_SUCCESS);
+	return (PARSE_FAILURE);
 }

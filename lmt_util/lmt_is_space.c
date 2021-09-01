@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lmt_is_digit.c                                     :+:      :+:    :+:   */
+/*   lmt_is_space.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/14 21:58:44 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/06/14 23:00:20 by jeonpark         ###   ########.fr       */
+/*   Created: 2021/06/14 21:48:39 by jeonpark          #+#    #+#             */
+/*   Updated: 2021/09/01 14:54:46 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "util.h"
+#include "lmt_util.h"
 
-int	lmt_is_digit(const char ch)
+int	lmt_is_space(const char ch)
 {
-	return ('0' <= ch && ch <= '9');
+	return ((9 <= ch && ch <= 13) || ch == 32);
 }

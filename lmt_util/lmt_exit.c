@@ -1,46 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_read_info_type.c                                 :+:      :+:    :+:   */
+/*   lmt_exit.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/06/14 22:31:44 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/09/01 14:59:58 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include <stdlib.h>
-#include "t_read_info.h"
-#include "util.h"
+#include "lmt_exit.h"
+#include "lmt_unsafe.h"
 
-t_read_info	*alloc_read_info(void)
+void	lmt_exit(int exit_code, char *string)
 {
-	t_read_info	*p_info;
-
-	p_info = lmt_alloc(sizeof(t_read_info));
-	return (p_info);
-}
-
-void		init_read_info(t_read_info *p_info, int fd)
-{
-	p_info->fd = fd;
-	p_info->reads_len = 0;
-	p_info->p_cursor = p_info->buffer;
-	p_info->p_line = NULL;
-}
-
-t_read_info	*new_read_info(int fd)
-{
-	t_read_info	*p_info;
-
-	p_info = alloc_read_info();
-	init_read_info(p_info, fd);
-	return (p_info);
-}
-
-void		free_read_info(t_read_info *p_info)
-{
-	free(p_info->p_line);
-	free(p_info);
+	if (string != NULL)
+		write(2, string, lmt_unsafe_strlen(string));
+	exit(exit_code);
 }

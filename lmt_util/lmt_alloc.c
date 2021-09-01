@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lmt_unsafe.h                                       :+:      :+:    :+:   */
+/*   lmt_alloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/14 22:22:05 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/06/14 22:43:48 by jeonpark         ###   ########.fr       */
+/*   Created: 2021/08/05 19:09:47 by jeonpark          #+#    #+#             */
+/*   Updated: 2021/09/01 14:54:37 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LMT_UNSAFE_H
-# define LMT_UNSAFE_H
+#include <stdlib.h>
+#include "lmt_util.h"
 
-# include <stdlib.h>
+void	*lmt_alloc(size_t size)
+{
+	void	*p_address;
 
-size_t	lmt_strlen(const char *string);
-void	*lmt_memcpy(void *p_write, const void *p_read, size_t size);
-
-#endif
+	p_address = malloc(size);
+	if (p_address == NULL)
+		lmt_exit(ALLOCATION_ERROR, "");
+	return (p_address);
+}

@@ -6,13 +6,18 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 23:19:28 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/06/15 10:06:49 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/09/01 15:02:34 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "util.h"
+#include "lmt_util.h"
 
 #define MAX_INT_LEN 10
+
+static int	devide_10(unsigned int *p_number)
+{
+	return (*p_number /= 10);
+}
 
 char	*lmt_itoa(int n)
 {
@@ -22,10 +27,10 @@ char	*lmt_itoa(int n)
 	char			*p_string;
 	char			*p_string_ch;
 
-	positive_n = (n >= 0 ? n : -n);
+	positive_n = ((n >= 0) * 2 - 1) * n;
 	p_buffer_ch = buffer;
 	*p_buffer_ch++ = '0' + (positive_n % 10);
-	while ((positive_n /= 10) != 0)
+	while (devide_10(&positive_n) != 0)
 		*p_buffer_ch++ = '0' + (positive_n % 10);
 	p_string = lmt_alloc(sizeof(char) * ((n < 0) + (p_buffer_ch - buffer) + 1));
 	p_string_ch = p_string;

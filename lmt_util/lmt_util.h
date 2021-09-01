@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   util.h                                             :+:      :+:    :+:   */
+/*   lmt_util.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/06/15 23:21:21 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/09/18 13:58:28 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTIL_H
-# define UTIL_H
+#ifndef LMT_UTIL_H
+# define LMT_UTIL_H
 
-# include <stdlib.h>
+# include <stddef.h>
 # include <sys/types.h>
-# include "t_read_info.h"
 # include "lmt_exit.h"
 # include "bool.h"
 
-# define PARSE_SUCCESSFUL	0
-# define PARSE_FAIL			1
+# define PARSE_SUCCESS	0
+# define PARSE_FAILURE	1
 
 void	*lmt_alloc(size_t size);
 ssize_t	lmt_read(int fd, void *buffer, size_t size);

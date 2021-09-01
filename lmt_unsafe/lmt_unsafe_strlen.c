@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lmt_is_space.c                                     :+:      :+:    :+:   */
+/*   lmt_unsafe_strlen.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/14 21:48:39 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/06/14 22:42:43 by jeonpark         ###   ########.fr       */
+/*   Created: 2021/06/14 22:00:57 by jeonpark          #+#    #+#             */
+/*   Updated: 2021/09/01 13:11:26 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "util.h"
+#include <stddef.h>
+#include "lmt_unsafe.h"
 
-int	lmt_is_space(const char ch)
+size_t	lmt_unsafe_strlen(const char *p_string)
 {
-	return ((9 <= ch && ch <= 13) || ch == 32);
+	const char	*p_string_ch;
+
+	p_string_ch = p_string;
+	while (*p_string_ch != '\0')
+		++p_string_ch;
+	return (p_string_ch - p_string);
 }
