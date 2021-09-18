@@ -2,4 +2,4 @@
 
 
 
-1. name convention of function: '<type>_<methode>'
+1. name convention of function: '<type>_<method>'

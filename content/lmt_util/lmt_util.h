@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/18 13:58:28 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/09/18 21:18:51 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stddef.h>
 # include <sys/types.h>
 # include "lmt_exit.h"
-# include "bool.h"
+# include "lmt_bool.h"
 
 # define PARSE_SUCCESS	0
 # define PARSE_FAILURE	1
