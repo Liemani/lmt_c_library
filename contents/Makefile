@@ -6,11 +6,11 @@
 #    By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/14 15:06:42 by jeonpark          #+#    #+#              #
-#    Updated: 2021/10/31 19:15:45 by jeonpark         ###   ########.fr        #
+#    Updated: 2021/10/31 19:37:33 by jeonpark         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME				:= liblmt_c_library.a
+NAME				:= test.out
 
 SRCS				:= \
 					   lmt_io/lmt_write.c \
@@ -42,6 +42,7 @@ SRCS				:= \
 					   lmt_string/lmt_string_method.c \
 					   lmt_string/lmt_string_static_constructor.c \
 					   lmt_string/lmt_string_type.c \
+					   main.c
 
 OBJS				:= $(SRCS:.c=.o)
 
@@ -83,7 +84,7 @@ re:					fclean all
 
 
 $(NAME):			$(OBJS)
-					ar rc $@ $^
+					$(LINK) -o $@ $^
 
 %.o:				%.c
 					$(COMPILE) -o $@ -c $<
