@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include "t_lmt_sequence_element.h"
-#include "lmt_util.h"
+#include "lmt_alloc.h"
 
 //	stdlib.h: free()
 

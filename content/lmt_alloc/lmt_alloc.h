@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lmt_alloc.c                                        :+:      :+:    :+:   */
+/*   lmt_alloc.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/05 19:09:47 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/19 13:41:31 by jeonpark         ###   ########.fr       */
+/*   Created: 2021/09/19 13:55:06 by jeonpark          #+#    #+#             */
+/*   Updated: 2021/09/19 13:55:25 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "lmt_util.h"
+#ifndef LMT_ALLOC_H
+# define LMT_ALLOC_H
 
-void	*lmt_alloc(size_t size)
-{
-	void	*p_address;
+# include <stddef.h>
 
-	p_address = malloc(size);
-	if (p_address == NULL)
-		exit(ALLOCATION_ERROR);
-	return (p_address);
-}
+void	*lmt_alloc(size_t size);
+
+#endif

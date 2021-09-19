@@ -6,13 +6,14 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/16 13:22:42 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/09/19 14:02:21 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "t_reader.h"
 #include "lmt_util.h"
+#include "lmt_alloc.h"
 
 static	t_reader	*reader_alloc(void)
 {

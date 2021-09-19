@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bool.h                                             :+:      :+:    :+:   */
+/*   lmt_alloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/19 13:44:43 by jeonpark         ###   ########.fr       */
+/*   Created: 2021/08/05 19:09:47 by jeonpark          #+#    #+#             */
+/*   Updated: 2021/09/19 13:57:31 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LMT_UTIL_CONSTANT_H
-# define LMT_UTIL_CONSTANT_H
+#include <stdlib.h>
+#include "lmt_alloc.h"
+#include "lmt_constant.h"
 
-# define FALSE	0
-# define TRUE	1
+//	stdlib.h: malloc(), exit(), size_t, NULL
 
-# define ALLOCATION_ERROR		1
-# define READ_ERROR				2
-# define WRITE_ERROR			3
+void	*lmt_alloc(size_t size)
+{
+	void	*p_address;
 
-# define PARSE_SUCCESS	0
-# define PARSE_FAILURE	1
-
-#endif
+	p_address = malloc(size);
+	if (p_address == NULL)
+		exit(ALLOCATION_ERROR);
+	return (p_address);
+}

@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lmt_util.h                                         :+:      :+:    :+:   */
+/*   bool.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/19 14:00:39 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/09/19 13:58:25 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LMT_UTIL_H
-# define LMT_UTIL_H
+#ifndef LMT_CONSTANT_H
+# define LMT_CONSTANT_H
 
-# include <stddef.h>
-# include <sys/types.h>
-# include "lmt_util_constant.h"
+# define FALSE	0
+# define TRUE	1
 
-ssize_t	lmt_read(int fd, void *buffer, size_t size);
-void	lmt_put_ch(const char ch);
-ssize_t	lmt_write(const char *string);
-char	*lmt_realloc_string(char *string, size_t size);
-int		lmt_atoui(char *string, unsigned int *p_result);
-int		lmt_atoi(char *string, int *p_result);
-char	*lmt_itoa(int n);
-int		lmt_is_space(const char ch);
-int		lmt_is_digit(const char ch);
+# define ALLOCATION_ERROR	1
+# define READ_ERROR			2
+# define WRITE_ERROR		3
+
+# define PARSE_SUCCESS	0
+# define PARSE_FAILURE	1
 
 #endif

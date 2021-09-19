@@ -6,12 +6,13 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 14:38:38 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/01 15:09:48 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/09/19 14:02:36 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "lmt_util.h"
+#include "lmt_alloc.h"
 
 char	*lmt_realloc_string(char *string, size_t size)
 {
