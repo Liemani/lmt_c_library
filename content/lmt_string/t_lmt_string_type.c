@@ -10,10 +10,10 @@ static t_lmt_string	*lmt_string_alloc(void)
 	return (lmt_alloc(sizeof(t_lmt_string)));
 }
 
-static void	lmt_string_init(t_lmt_string *string, const char *value)
+void	lmt_string_init(t_lmt_string *string, const char *value)
 {
 	if (value == NULL)
-		value = ""
+		value = "";
 	string->value = lmt_unsafe_strdup(value);
 	string->count = lmt_unsafe_strlen(value);
 }
