@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 14:38:40 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/01 15:05:16 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/09/19 13:48:11 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ ssize_t	lmt_write(const char *string)
 		return (0);
 	number_of_bytes_write = write(1, string, lmt_unsafe_strlen(string));
 	if (number_of_bytes_write == -1)
-		lmt_exit(WRITE_ERROR, "");
+		exit(WRITE_ERROR);
 	return (number_of_bytes_write);
 }

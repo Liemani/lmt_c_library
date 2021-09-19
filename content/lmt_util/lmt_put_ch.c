@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 14:38:42 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/01 14:54:37 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/09/19 13:50:35 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ void	lmt_put_ch(const char ch)
 
 	result = write(1, &ch, 1);
 	if (result == -1)
-		lmt_exit(WRITE_ERROR, "");
+		exit(WRITE_ERROR);
 }

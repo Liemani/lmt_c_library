@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 13:32:40 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/01 14:54:37 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/09/19 13:48:27 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ ssize_t	lmt_read(int fd, void *buffer, size_t size)
 
 	reads_len = read(fd, buffer, size);
 	if (reads_len == -1)
-		lmt_exit(READ_ERROR, "");
+		exit(READ_ERROR);
 	return (reads_len);
 }
