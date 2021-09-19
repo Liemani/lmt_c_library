@@ -6,14 +6,13 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 22:05:04 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/18 14:05:38 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/09/19 20:18:48 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "lmt_unsafe.h"
-
-typedef unsigned char	t_byte;
+#include "lmt_constant.h"
 
 void	*lmt_unsafe_memcpy(void *p_write, const void *p_read, size_t size)
 {

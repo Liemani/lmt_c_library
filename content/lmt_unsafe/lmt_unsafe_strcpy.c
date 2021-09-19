@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bool.h                                             :+:      :+:    :+:   */
+/*   lmt_unsafe_strcpy.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/19 20:18:14 by jeonpark         ###   ########.fr       */
+/*   Created: 2021/09/21 20:13:27 by jeonpark          #+#    #+#             */
+/*   Updated: 2021/09/21 20:13:31 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LMT_CONSTANT_H
-# define LMT_CONSTANT_H
+#include "lmt_unsafe.h"
 
-# define FALSE	0
-# define TRUE	1
-
-# define ALLOCATION_ERROR	1
-# define READ_ERROR			2
-# define WRITE_ERROR		3
-
-# define PARSE_SUCCESS	0
-# define PARSE_FAILURE	1
-
-typedef unsigned char	t_byte;
-
-#endif
+void	*lmt_unsafe_strcpy(char *p_write, const char *p_read)
+{
+	while (*p_read != '\0')
+		*p_write++ = *p_read++;
+	return (p_write);
+}
