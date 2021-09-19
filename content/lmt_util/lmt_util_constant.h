@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lmt_exit.c                                         :+:      :+:    :+:   */
+/*   bool.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/01 14:59:58 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/09/19 13:44:43 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-#include "lmt_exit.h"
-#include "lmt_unsafe.h"
+#ifndef LMT_UTIL_CONSTANT_H
+# define LMT_UTIL_CONSTANT_H
 
-void	lmt_exit(int exit_code, char *string)
-{
-	if (string != NULL)
-		write(2, string, lmt_unsafe_strlen(string));
-	exit(exit_code);
-}
+# define FALSE	0
+# define TRUE	1
+
+# define ALLOCATION_ERROR		1
+# define READ_ERROR				2
+# define WRITE_ERROR			3
+
+# define PARSE_SUCCESS	0
+# define PARSE_FAILURE	1
+
+#endif

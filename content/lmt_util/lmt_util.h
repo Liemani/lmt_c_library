@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/18 21:18:51 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/09/19 13:44:55 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,7 @@
 
 # include <stddef.h>
 # include <sys/types.h>
-# include "lmt_exit.h"
-# include "lmt_bool.h"
-
-# define PARSE_SUCCESS	0
-# define PARSE_FAILURE	1
+# include "lmt_util_constant.h"
 
 void	*lmt_alloc(size_t size);
 ssize_t	lmt_read(int fd, void *buffer, size_t size);
