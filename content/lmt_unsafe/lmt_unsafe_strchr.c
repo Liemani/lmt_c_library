@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lmt_unsafe.h                                       :+:      :+:    :+:   */
+/*   lmt_unsafe_strchr.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/14 22:22:05 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/19 17:18:24 by jeonpark         ###   ########.fr       */
+/*   Created: 2021/09/19 17:50:22 by jeonpark          #+#    #+#             */
+/*   Updated: 2021/09/19 17:50:24 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LMT_UNSAFE_H
-# define LMT_UNSAFE_H
+#include <stddef.h>
+#include "lmt_unsafe.h"
 
-# include <stddef.h>
+char	*lmt_unsafe_strchr(char *string, char *word)
+{
+	char	*p_char;
 
-size_t	lmt_unsafe_strlen(const char *string);
-int		lmt_unsafe_string_starts(char *string, char *word);
-void	*lmt_unsafe_memcpy(void *p_write, const void *p_read, size_t size);
-void	*lmt_unsafe_strdup(const char *string);
-char	*lmt_unsafe_strchr(char *string, char *word);
-char	*lmt_unsafe_strrchr(char *string, char *word);
-
-#endif
+	p_char = string;
+	while (*p_char != '\0')
+	{
+		if (lmt_unsafe_string_starts(p_char, word))
+			return (p_char);
+		++p_char;
+	}
+	return (NULL);
+}
