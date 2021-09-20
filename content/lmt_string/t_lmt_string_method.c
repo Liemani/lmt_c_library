@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   t_lmt_string_method.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/20 17:02:53 by jeonpark          #+#    #+#             */
+/*   Updated: 2021/09/20 17:02:57 by jeonpark         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include "t_lmt_string.h"
 #include "lmt_alloc.h"
@@ -21,6 +33,36 @@ t_lmt_string	*lmt_string_split(t_lmt_string *string, char *separator)
 		++separator;
 	}
 	lmt_string_init(string, first_separator);
+	free(old_value);
+	return (head_string);
+}
+
+/// - Assume: string->count > count
+t_lmt_string	*lmt_string_split_first(t_lmt_string *string, size_t count)
+{
+	char			*old_value;
+	t_lmt_string	*head_string;
+
+	old_value = string->value;
+	lmt_string_init(string, old_value + count);
+	*(old_value + count) = '\0';
+	head_string = lmt_string_new(old_value);
+	free(old_value);
+	return (head_string);
+}
+
+/// - Assume: string->count > count
+t_lmt_string	*lmt_string_split_last(t_lmt_string *string, size_t count)
+{
+	char			*old_value;
+	t_lmt_string	*head_string;
+	size_t			split_index;
+
+	old_value = string->value;
+	split_index = string->count - count;
+	lmt_string_init(string, old_value + split_index);
+	*(old_value + split_index) = '\0';
+	head_string = lmt_string_new(old_value);
 	free(old_value);
 	return (head_string);
 }
