@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/20 17:15:47 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/09/20 17:47:18 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stddef.h>
 # include <sys/types.h>
-# include "lmt_util_constant.h"
+# include "lmt_constant.h"
 
 ssize_t	lmt_read(int fd, void *buffer, size_t size);
 void	lmt_put_ch(const char ch);
