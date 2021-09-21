@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/20 17:47:18 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/09/21 16:55:21 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	lmt_put_ch(const char ch);
 ssize_t	lmt_write(const char *string);
 int		lmt_atoui(char *string, unsigned int *p_result);
 int		lmt_atoi(char *string, int *p_result);
+int		lmt_atol(char *string, long *p_result);
 char	*lmt_itoa(int n);
 int		lmt_is_space(const char ch);
 int		lmt_is_digit(const char ch);

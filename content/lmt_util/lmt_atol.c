@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 21:43:14 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/21 20:31:06 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/09/21 20:08:09 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 ///	- Assume: reading and writing p_result would be slower than
 ///		reading and writing result
-static int	lmt_atoi_parse_digit(char *string, int *p_result)
+static int	lmt_atol_parse_digit(char *string, long *p_result)
 {
-	int	result;
+	long	result;
 
 	while (*string == '0')
 		++string;
@@ -38,7 +38,7 @@ static int	lmt_atoi_parse_digit(char *string, int *p_result)
 		return (PARSE_FAILURE);
 }
 
-int	lmt_atoi(char *string, int *p_result)
+int	lmt_atol(char *string, long *p_result)
 {
 	int		sign;
 
@@ -51,7 +51,7 @@ int	lmt_atoi(char *string, int *p_result)
 		++string;
 	if (!lmt_is_digit(*string))
 		return (PARSE_FAILURE);
-	if (lmt_atoi_parse_digit(string, p_result) == PARSE_FAILURE)
+	if (lmt_atol_parse_digit(string, p_result) == PARSE_FAILURE)
 		return (PARSE_FAILURE);
 	else
 	{
