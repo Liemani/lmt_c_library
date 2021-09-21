@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/19 20:18:14 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/09/21 17:36:52 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@
 
 # define PARSE_SUCCESS	0
 # define PARSE_FAILURE	1
+
+# define MAX_INT_LENGTH		10
+# define MAX_LONG_LENGTH	19
 
 typedef unsigned char	t_byte;
 
