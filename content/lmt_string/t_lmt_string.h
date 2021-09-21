@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 17:02:52 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/20 17:02:57 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/09/21 13:59:31 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define T_LMT_STRING_H
 
 # include <stddef.h>
+
+//	lmt_alloc(), free(), lmt_unsafe_strchr()
 
 typedef struct s_lmt_string
 {

@@ -1,8 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   t_lmt_sequence.h                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/21 16:32:56 by jeonpark          #+#    #+#             */
+/*   Updated: 2021/09/21 16:33:57 by jeonpark         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef T_LMT_SEQUENCE_H
 # define T_LMT_SEQUENCE_H
 
 # include "t_lmt_sequence_constant.h"
 # include "t_lmt_sequence_element.h"
+
+//	lmt_alloc(), free()
 
 typedef struct s_lmt_sequence
 {
