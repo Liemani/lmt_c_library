@@ -212,7 +212,7 @@ normal! zt
 2
 normal! 0
 tabnext
-edit content/Makefile
+edit contents/Makefile
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -355,7 +355,7 @@ normal! 044|
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/main.c") | buffer ~/git/lmt_c_library/content/main.c | else | edit ~/git/lmt_c_library/content/main.c | endif
+if bufexists("~/git/lmt_c_library/contents/main.c") | buffer ~/git/lmt_c_library/contents/main.c | else | edit ~/git/lmt_c_library/contents/main.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -479,7 +479,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_constant.h") | buffer ~/git/lmt_c_library/content/lmt_constant.h | else | edit ~/git/lmt_c_library/content/lmt_constant.h | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_constant.h") | buffer ~/git/lmt_c_library/contents/lmt_constant.h | else | edit ~/git/lmt_c_library/contents/lmt_constant.h | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -607,7 +607,7 @@ exe 'vert 1resize ' . ((&columns * 107 + 161) / 322)
 exe 'vert 2resize ' . ((&columns * 107 + 161) / 322)
 exe 'vert 3resize ' . ((&columns * 106 + 161) / 322)
 tabnext
-edit ~/git/lmt_c_library/content/lmt_alloc/lmt_alloc.c
+edit ~/git/lmt_c_library/contents/lmt_alloc/lmt_alloc.c
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -747,7 +747,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_alloc/lmt_alloc.h") | buffer ~/git/lmt_c_library/content/lmt_alloc/lmt_alloc.h | else | edit ~/git/lmt_c_library/content/lmt_alloc/lmt_alloc.h | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_alloc/lmt_alloc.h") | buffer ~/git/lmt_c_library/contents/lmt_alloc/lmt_alloc.h | else | edit ~/git/lmt_c_library/contents/lmt_alloc/lmt_alloc.h | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -874,7 +874,7 @@ wincmd w
 exe 'vert 1resize ' . ((&columns * 161 + 161) / 322)
 exe 'vert 2resize ' . ((&columns * 160 + 161) / 322)
 tabnext
-edit ~/git/lmt_c_library/content/lmt_reader/t_reader_type.c
+edit ~/git/lmt_c_library/contents/lmt_reader/t_reader_type.c
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -1018,7 +1018,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_reader/t_reader_method.c") | buffer ~/git/lmt_c_library/content/lmt_reader/t_reader_method.c | else | edit ~/git/lmt_c_library/content/lmt_reader/t_reader_method.c | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_reader/t_reader_method.c") | buffer ~/git/lmt_c_library/contents/lmt_reader/t_reader_method.c | else | edit ~/git/lmt_c_library/contents/lmt_reader/t_reader_method.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -1143,7 +1143,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_reader/t_reader.h") | buffer ~/git/lmt_c_library/content/lmt_reader/t_reader.h | else | edit ~/git/lmt_c_library/content/lmt_reader/t_reader.h | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_reader/t_reader.h") | buffer ~/git/lmt_c_library/contents/lmt_reader/t_reader.h | else | edit ~/git/lmt_c_library/contents/lmt_reader/t_reader.h | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -1271,7 +1271,7 @@ exe 'vert 1resize ' . ((&columns * 107 + 161) / 322)
 exe 'vert 2resize ' . ((&columns * 107 + 161) / 322)
 exe 'vert 3resize ' . ((&columns * 106 + 161) / 322)
 tabnext
-edit ~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_element_type.c
+edit ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_element_type.c
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -1444,7 +1444,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_element_method.c") | buffer ~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_element_method.c | else | edit ~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_element_method.c | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_element_method.c") | buffer ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_element_method.c | else | edit ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_element_method.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -1575,7 +1575,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_type.c") | buffer ~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_type.c | else | edit ~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_type.c | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_type.c") | buffer ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_type.c | else | edit ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_type.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -1704,7 +1704,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_method.c") | buffer ~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_method.c | else | edit ~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_method.c | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_method.c") | buffer ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_method.c | else | edit ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_method.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -1829,7 +1829,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence.h") | buffer ~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence.h | else | edit ~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence.h | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence.h") | buffer ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence.h | else | edit ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence.h | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -1954,7 +1954,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_element.h") | buffer ~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_element.h | else | edit ~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_element.h | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_element.h") | buffer ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_element.h | else | edit ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_element.h | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -2079,7 +2079,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_constant.h") | buffer ~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_constant.h | else | edit ~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_constant.h | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_constant.h") | buffer ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_constant.h | else | edit ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_constant.h | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -2218,7 +2218,7 @@ exe 'vert 6resize ' . ((&columns * 107 + 161) / 322)
 exe '7resize ' . ((&lines * 36 + 56) / 113)
 exe 'vert 7resize ' . ((&columns * 107 + 161) / 322)
 tabnext
-edit ~/git/lmt_c_library/content/lmt_string/t_lmt_string_type.c
+edit ~/git/lmt_c_library/contents/lmt_string/t_lmt_string_type.c
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -2362,7 +2362,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_string/t_lmt_string_method.c") | buffer ~/git/lmt_c_library/content/lmt_string/t_lmt_string_method.c | else | edit ~/git/lmt_c_library/content/lmt_string/t_lmt_string_method.c | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_string/t_lmt_string_method.c") | buffer ~/git/lmt_c_library/contents/lmt_string/t_lmt_string_method.c | else | edit ~/git/lmt_c_library/contents/lmt_string/t_lmt_string_method.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -2487,7 +2487,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_string/t_lmt_string.h") | buffer ~/git/lmt_c_library/content/lmt_string/t_lmt_string.h | else | edit ~/git/lmt_c_library/content/lmt_string/t_lmt_string.h | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_string/t_lmt_string.h") | buffer ~/git/lmt_c_library/contents/lmt_string/t_lmt_string.h | else | edit ~/git/lmt_c_library/contents/lmt_string/t_lmt_string.h | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -2615,7 +2615,7 @@ exe 'vert 1resize ' . ((&columns * 107 + 161) / 322)
 exe 'vert 2resize ' . ((&columns * 106 + 161) / 322)
 exe 'vert 3resize ' . ((&columns * 107 + 161) / 322)
 tabnext
-edit ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_strchr.c
+edit ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strchr.c
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -2789,7 +2789,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_strrchr.c") | buffer ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_strrchr.c | else | edit ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_strrchr.c | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strrchr.c") | buffer ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strrchr.c | else | edit ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strrchr.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -2914,7 +2914,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_strlen.c") | buffer ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_strlen.c | else | edit ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_strlen.c | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strlen.c") | buffer ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strlen.c | else | edit ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strlen.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -3039,7 +3039,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_string_starts.c") | buffer ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_string_starts.c | else | edit ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_string_starts.c | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_string_starts.c") | buffer ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_string_starts.c | else | edit ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_string_starts.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -3164,7 +3164,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_memcpy.c") | buffer ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_memcpy.c | else | edit ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_memcpy.c | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_memcpy.c") | buffer ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_memcpy.c | else | edit ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_memcpy.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -3289,7 +3289,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_strcpy.c") | buffer ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_strcpy.c | else | edit ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_strcpy.c | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strcpy.c") | buffer ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strcpy.c | else | edit ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strcpy.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -3414,7 +3414,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_strdup.c") | buffer ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_strdup.c | else | edit ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_strdup.c | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strdup.c") | buffer ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strdup.c | else | edit ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strdup.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -3539,7 +3539,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe.h") | buffer ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe.h | else | edit ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe.h | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe.h") | buffer ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe.h | else | edit ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe.h | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -3680,7 +3680,7 @@ exe '7resize ' . ((&lines * 36 + 56) / 113)
 exe 'vert 7resize ' . ((&columns * 80 + 161) / 322)
 exe 'vert 8resize ' . ((&columns * 79 + 161) / 322)
 tabnext
-edit ~/git/lmt_c_library/content/lmt_util/lmt_read.c
+edit ~/git/lmt_c_library/contents/lmt_util/lmt_read.c
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -3864,7 +3864,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_util/lmt_write.c") | buffer ~/git/lmt_c_library/content/lmt_util/lmt_write.c | else | edit ~/git/lmt_c_library/content/lmt_util/lmt_write.c | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_util/lmt_write.c") | buffer ~/git/lmt_c_library/contents/lmt_util/lmt_write.c | else | edit ~/git/lmt_c_library/contents/lmt_util/lmt_write.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -3989,7 +3989,7 @@ normal! 02|
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_util/lmt_is_digit.c") | buffer ~/git/lmt_c_library/content/lmt_util/lmt_is_digit.c | else | edit ~/git/lmt_c_library/content/lmt_util/lmt_is_digit.c | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_util/lmt_is_digit.c") | buffer ~/git/lmt_c_library/contents/lmt_util/lmt_is_digit.c | else | edit ~/git/lmt_c_library/contents/lmt_util/lmt_is_digit.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -4114,7 +4114,7 @@ normal! 02|
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_util/lmt_is_space.c") | buffer ~/git/lmt_c_library/content/lmt_util/lmt_is_space.c | else | edit ~/git/lmt_c_library/content/lmt_util/lmt_is_space.c | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_util/lmt_is_space.c") | buffer ~/git/lmt_c_library/contents/lmt_util/lmt_is_space.c | else | edit ~/git/lmt_c_library/contents/lmt_util/lmt_is_space.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -4239,7 +4239,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_util/lmt_atoi.c") | buffer ~/git/lmt_c_library/content/lmt_util/lmt_atoi.c | else | edit ~/git/lmt_c_library/content/lmt_util/lmt_atoi.c | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_util/lmt_atoi.c") | buffer ~/git/lmt_c_library/contents/lmt_util/lmt_atoi.c | else | edit ~/git/lmt_c_library/contents/lmt_util/lmt_atoi.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -4364,7 +4364,7 @@ normal! 025|
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_util/lmt_atol.c") | buffer ~/git/lmt_c_library/content/lmt_util/lmt_atol.c | else | edit ~/git/lmt_c_library/content/lmt_util/lmt_atol.c | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_util/lmt_atol.c") | buffer ~/git/lmt_c_library/contents/lmt_util/lmt_atol.c | else | edit ~/git/lmt_c_library/contents/lmt_util/lmt_atol.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -4489,7 +4489,7 @@ normal! 025|
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_util/lmt_atoui.c") | buffer ~/git/lmt_c_library/content/lmt_util/lmt_atoui.c | else | edit ~/git/lmt_c_library/content/lmt_util/lmt_atoui.c | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_util/lmt_atoui.c") | buffer ~/git/lmt_c_library/contents/lmt_util/lmt_atoui.c | else | edit ~/git/lmt_c_library/contents/lmt_util/lmt_atoui.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -4614,7 +4614,7 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_util/lmt_itoa.c") | buffer ~/git/lmt_c_library/content/lmt_util/lmt_itoa.c | else | edit ~/git/lmt_c_library/content/lmt_util/lmt_itoa.c | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_util/lmt_itoa.c") | buffer ~/git/lmt_c_library/contents/lmt_util/lmt_itoa.c | else | edit ~/git/lmt_c_library/contents/lmt_util/lmt_itoa.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -4739,7 +4739,7 @@ normal! 041|
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_util/lmt_ltoa.c") | buffer ~/git/lmt_c_library/content/lmt_util/lmt_ltoa.c | else | edit ~/git/lmt_c_library/content/lmt_util/lmt_ltoa.c | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_util/lmt_ltoa.c") | buffer ~/git/lmt_c_library/contents/lmt_util/lmt_ltoa.c | else | edit ~/git/lmt_c_library/contents/lmt_util/lmt_ltoa.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -4864,7 +4864,7 @@ normal! 029|
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/content/lmt_util/lmt_util.h") | buffer ~/git/lmt_c_library/content/lmt_util/lmt_util.h | else | edit ~/git/lmt_c_library/content/lmt_util/lmt_util.h | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_util/lmt_util.h") | buffer ~/git/lmt_c_library/contents/lmt_util/lmt_util.h | else | edit ~/git/lmt_c_library/contents/lmt_util/lmt_util.h | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -5010,66 +5010,66 @@ exe 'vert 10resize ' . ((&columns * 79 + 161) / 322)
 tabnext 7
 set stal=1
 badd +1 ~/git/lmt_c_library/README.txt
-badd +1 ~/git/lmt_c_library/content/Makefile
-badd +1 ~/git/lmt_c_library/content/lmt_alloc/lmt_alloc.c
-badd +1 ~/git/lmt_c_library/content/lmt_reader/t_reader_type.c
-badd +1 ~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_element_type.c
-badd +1 ~/git/lmt_c_library/content/lmt_string/t_lmt_string_type.c
-badd +1 ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_strchr.c
-badd +1 ~/git/lmt_c_library/content/lmt_util/lmt_read.c
-badd +2 ~/git/lmt_c_library/content/main.c
-badd +1 ~/git/lmt_c_library/content/lmt_constant.h
-badd +1 ~/git/lmt_c_library/content/lmt_alloc/lmt_alloc.h
-badd +1 ~/git/lmt_c_library/content/lmt_reader/t_reader_method.c
-badd +1 ~/git/lmt_c_library/content/lmt_reader/t_reader.h
-badd +1 ~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_element_method.c
-badd +1 ~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_type.c
-badd +1 ~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_method.c
-badd +1 ~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence.h
-badd +1 ~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_element.h
-badd +1 ~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_constant.h
-badd +52 ~/git/lmt_c_library/content/lmt_string/t_lmt_string_method.c
-badd +1 ~/git/lmt_c_library/content/lmt_string/t_lmt_string.h
-badd +1 ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_strrchr.c
-badd +13 ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_strlen.c
-badd +1 ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_memcpy.c
-badd +1 ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe.h
-badd +1 ~/git/lmt_c_library/content/lmt_util/lmt_write.c
-badd +1 ~/git/lmt_c_library/content/lmt_util/lmt_is_digit.c
-badd +1 ~/git/lmt_c_library/content/lmt_util/lmt_is_space.c
-badd +1 ~/git/lmt_c_library/content/lmt_util/lmt_atoi.c
-badd +1 ~/git/lmt_c_library/content/lmt_util/lmt_atol.c
-badd +1 ~/git/lmt_c_library/content/lmt_util/lmt_atoui.c
-badd +1 ~/git/lmt_c_library/content/lmt_util/lmt_itoa.c
-badd +1 ~/git/lmt_c_library/content/lmt_util/lmt_ltoa.c
-badd +0 ~/git/lmt_c_library/content/lmt_util/lmt_util.h
-badd +1 ~/git/lmt_c_library/content/lmt_util/lmt_exit.c
-badd +1 ~/git/lmt_c_library/content/lmt_util/lmt_alloc.c
-badd +16 ~/git/lmt_c_library/content/lmt_util/lmt_realloc_string.c
-badd +1 ~/git/lmt_c_library/content/lmt_util/lmt_exit.h
-badd +1 ~/git/lmt_c_library/content/lmt_util/lmt_bool.h
-badd +1 ~/git/lmt_c_library/content/lmt_list/t_lmt_sequence_element_type.c
-badd +1 ~/git/lmt_c_library/content/lmt_list/t_lmt_sequence_element_method.c
-badd +1 ~/git/lmt_c_library/content/lmt_list/t_lmt_sequence_type.c
-badd +1 ~/git/lmt_c_library/content/lmt_list/t_lmt_sequence_method.c
-badd +1 ~/git/lmt_c_library/content/lmt_list/t_lmt_sequence.h
-badd +1 ~/git/lmt_c_library/content/lmt_list/t_lmt_sequence_element.h
-badd +1 ~/git/lmt_c_library/content/lmt_list/t_lmt_list_element_type.c
-badd +1 ~/git/lmt_c_library/content/lmt_list/t_lmt_list_element_method.c
-badd +1 ~/git/lmt_c_library/content/lmt_list/t_lmt_list_type.c
-badd +1 ~/git/lmt_c_library/content/lmt_list/t_lmt_list_method.c
-badd +1 ~/git/lmt_c_library/content/lmt_list/t_lmt_list.h
-badd +1 ~/git/lmt_c_library/content/lmt_list/t_lmt_list_element.h
-badd +1 ~/git/lmt_c_library/content/lmt_iterator/t_lmt_iterator_type.c
-badd +1 ~/git/lmt_c_library/content/lmt_iterator/t_lmt_iterator_method.c
-badd +25 ~/git/lmt_c_library/content/lmt_iterator/t_lmt_iterator.h
-badd +1 ~/git/lmt_c_library/content/lmt_util/bool.h
-badd +1 ~/git/lmt_c_library/content/lmt_iterator/t_lmt_iterator.c
-badd +4 ~/git/lmt_c_library/content/lmt_sequence/t_lmt_sequence_define.h
-badd +4 ~/git/lmt_c_library/content/lmt_string/lmt_string_status.c
-badd +13 ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_strcpy.c
-badd +0 ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_strdup.c
-badd +0 ~/git/lmt_c_library/content/lmt_unsafe/lmt_unsafe_string_starts.c
+badd +1 ~/git/lmt_c_library/contents/Makefile
+badd +1 ~/git/lmt_c_library/contents/lmt_alloc/lmt_alloc.c
+badd +1 ~/git/lmt_c_library/contents/lmt_reader/t_reader_type.c
+badd +1 ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_element_type.c
+badd +1 ~/git/lmt_c_library/contents/lmt_string/t_lmt_string_type.c
+badd +1 ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strchr.c
+badd +1 ~/git/lmt_c_library/contents/lmt_util/lmt_read.c
+badd +2 ~/git/lmt_c_library/contents/main.c
+badd +1 ~/git/lmt_c_library/contents/lmt_constant.h
+badd +1 ~/git/lmt_c_library/contents/lmt_alloc/lmt_alloc.h
+badd +1 ~/git/lmt_c_library/contents/lmt_reader/t_reader_method.c
+badd +1 ~/git/lmt_c_library/contents/lmt_reader/t_reader.h
+badd +1 ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_element_method.c
+badd +1 ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_type.c
+badd +1 ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_method.c
+badd +1 ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence.h
+badd +1 ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_element.h
+badd +1 ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_constant.h
+badd +52 ~/git/lmt_c_library/contents/lmt_string/t_lmt_string_method.c
+badd +1 ~/git/lmt_c_library/contents/lmt_string/t_lmt_string.h
+badd +1 ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strrchr.c
+badd +13 ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strlen.c
+badd +1 ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_memcpy.c
+badd +1 ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe.h
+badd +1 ~/git/lmt_c_library/contents/lmt_util/lmt_write.c
+badd +1 ~/git/lmt_c_library/contents/lmt_util/lmt_is_digit.c
+badd +1 ~/git/lmt_c_library/contents/lmt_util/lmt_is_space.c
+badd +1 ~/git/lmt_c_library/contents/lmt_util/lmt_atoi.c
+badd +1 ~/git/lmt_c_library/contents/lmt_util/lmt_atol.c
+badd +1 ~/git/lmt_c_library/contents/lmt_util/lmt_atoui.c
+badd +1 ~/git/lmt_c_library/contents/lmt_util/lmt_itoa.c
+badd +1 ~/git/lmt_c_library/contents/lmt_util/lmt_ltoa.c
+badd +0 ~/git/lmt_c_library/contents/lmt_util/lmt_util.h
+badd +1 ~/git/lmt_c_library/contents/lmt_util/lmt_exit.c
+badd +1 ~/git/lmt_c_library/contents/lmt_util/lmt_alloc.c
+badd +16 ~/git/lmt_c_library/contents/lmt_util/lmt_realloc_string.c
+badd +1 ~/git/lmt_c_library/contents/lmt_util/lmt_exit.h
+badd +1 ~/git/lmt_c_library/contents/lmt_util/lmt_bool.h
+badd +1 ~/git/lmt_c_library/contents/lmt_list/t_lmt_sequence_element_type.c
+badd +1 ~/git/lmt_c_library/contents/lmt_list/t_lmt_sequence_element_method.c
+badd +1 ~/git/lmt_c_library/contents/lmt_list/t_lmt_sequence_type.c
+badd +1 ~/git/lmt_c_library/contents/lmt_list/t_lmt_sequence_method.c
+badd +1 ~/git/lmt_c_library/contents/lmt_list/t_lmt_sequence.h
+badd +1 ~/git/lmt_c_library/contents/lmt_list/t_lmt_sequence_element.h
+badd +1 ~/git/lmt_c_library/contents/lmt_list/t_lmt_list_element_type.c
+badd +1 ~/git/lmt_c_library/contents/lmt_list/t_lmt_list_element_method.c
+badd +1 ~/git/lmt_c_library/contents/lmt_list/t_lmt_list_type.c
+badd +1 ~/git/lmt_c_library/contents/lmt_list/t_lmt_list_method.c
+badd +1 ~/git/lmt_c_library/contents/lmt_list/t_lmt_list.h
+badd +1 ~/git/lmt_c_library/contents/lmt_list/t_lmt_list_element.h
+badd +1 ~/git/lmt_c_library/contents/lmt_iterator/t_lmt_iterator_type.c
+badd +1 ~/git/lmt_c_library/contents/lmt_iterator/t_lmt_iterator_method.c
+badd +25 ~/git/lmt_c_library/contents/lmt_iterator/t_lmt_iterator.h
+badd +1 ~/git/lmt_c_library/contents/lmt_util/bool.h
+badd +1 ~/git/lmt_c_library/contents/lmt_iterator/t_lmt_iterator.c
+badd +4 ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_define.h
+badd +4 ~/git/lmt_c_library/contents/lmt_string/lmt_string_status.c
+badd +13 ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strcpy.c
+badd +0 ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strdup.c
+badd +0 ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_string_starts.c
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
