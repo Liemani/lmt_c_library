@@ -6,12 +6,13 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 20:40:38 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/18 13:59:02 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/05 13:50:38 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <limits.h>
-#include "lmt_util.h"
+#include "lmt_primitive_type.h"
+#include "lmt_constant.h"
 
 int	lmt_atoui(char *string, unsigned int *p_result)
 {

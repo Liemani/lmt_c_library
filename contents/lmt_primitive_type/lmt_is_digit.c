@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bool.h                                             :+:      :+:    :+:   */
+/*   lmt_is_digit.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/05 13:43:09 by jeonpark         ###   ########.fr       */
+/*   Created: 2021/06/14 21:58:44 by jeonpark          #+#    #+#             */
+/*   Updated: 2021/10/05 13:46:50 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LMT_CONSTANT_H
-# define LMT_CONSTANT_H
+#include "lmt_primitive_type.h"
 
-# define FALSE	0
-# define TRUE	1
-
-# define PARSE_SUCCESS	0
-# define PARSE_FAILURE	1
-
-# define MAX_INT_LENGTH		10
-# define MAX_LONG_LENGTH	19
-
-typedef unsigned char	t_byte;
-
-#endif
+int	lmt_is_digit(const char ch)
+{
+	return ('0' <= ch && ch <= '9');
+}

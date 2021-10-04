@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lmt_write.c                                        :+:      :+:    :+:   */
+/*   lmt_c_library.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/01 14:38:40 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/19 13:48:11 by jeonpark         ###   ########.fr       */
+/*   Created: 2021/10/05 13:43:45 by jeonpark          #+#    #+#             */
+/*   Updated: 2021/10/05 14:03:18 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <sys/types.h>
-#include "lmt_util.h"
+#ifndef LMT_C_LIBRARY_H
+# define LMT_C_LIBRARY_H
 
-ssize_t	lmt_write(const char *string)
-{
-	ssize_t	number_of_bytes_write;
+# include "lmt_alloc.h"
+# include "lmt_constant.h"
+# include "lmt_io.h"
+# include "lmt_primitive_type.h"
+# include "lmt_reader.h"
+# include "lmt_sequence.h"
+# include "lmt_string.h"
+# include "lmt_unsafe.h"
 
-	if (string == NULL)
-		return (0);
-	number_of_bytes_write = write(1, string, lmt_unsafe_strlen(string));
-	if (number_of_bytes_write == -1)
-		exit(WRITE_ERROR);
-	return (number_of_bytes_write);
-}
+#endif

@@ -6,11 +6,11 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 21:43:14 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/21 20:31:06 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/05 13:46:49 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lmt_util.h"
+#include "lmt_primitive_type.h"
 #include "lmt_constant.h"
 
 ///	- Assume: reading and writing p_result would be slower than
