@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lmt_c_library.h                                    :+:      :+:    :+:   */
+/*   t_lmt_byte.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 13:43:45 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/09 15:39:52 by jeonpark         ###   ########.fr       */
+/*   Created: 2021/10/09 14:59:47 by jeonpark          #+#    #+#             */
+/*   Updated: 2021/10/09 15:32:29 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LMT_C_LIBRARY_H
-# define LMT_C_LIBRARY_H
+#ifndef T_LMT_BYTE_H
+# define T_LMT_BYTE_H
 
-# include "lmt_alloc.h"
-# include "t_lmt_byte.h"
-# include "lmt_constant.h"
-# include "lmt_fcntl.h"
-# include "lmt_io.h"
-# include "lmt_primitive_type.h"
-# include "t_lmt_sequence.h"
-# include "t_lmt_string.h"
-# include "lmt_unsafe.h"
+# include <stddef.h>	// size_t
+
+typedef unsigned char	t_lmt_byte;
+
+int	lmt_byte_cmp(const t_lmt_byte *lhs, const t_lmt_byte *rhs, const size_t count);
 
 #endif

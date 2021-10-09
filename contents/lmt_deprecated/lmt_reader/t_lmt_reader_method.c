@@ -6,13 +6,14 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/16 13:22:54 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/09 15:38:53 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include "t_reader.h"
-#include "lmt_util.h"
+#include <stddef.h>	// size_t, NULL
+#include "t_lmt_reader.h"
+#include "lmt_constant.h"
+#include "lmt_unsafe.h"
 
 /*
 **	Return value:
@@ -20,7 +21,7 @@
 **		FALSE: Needs lmt_read()
 */
 
-static int	append_until_nl(t_reader *p_reader)
+static int	append_until_nl(t_lmt_reader *p_reader)
 {
 	char	*p_end;
 	int		get_to_nl;
@@ -31,7 +32,7 @@ static int	append_until_nl(t_reader *p_reader)
 	p_end = p_reader->buffer + p_reader->reads_len;
 	if (p_reader->p_cursor >= p_end)
 		return (FALSE);
-	p_append_end = ft_strchr(p_reader->p_cursor, '\n');
+	p_append_end = lmt_unsafe_strchr(p_reader->p_cursor, "\n");
 	if (p_append_end == NULL)
 	{
 		p_append_end = p_end;
@@ -40,7 +41,7 @@ static int	append_until_nl(t_reader *p_reader)
 	else
 		get_to_nl = TRUE;
 	*p_append_end = '\0';
-	line_len = p_reader->p_line != NULL ? ft_strlen(p_reader->p_line) : 0;
+	line_len = p_reader->p_line != NULL ? lmt_unsafe_strlen(p_reader->p_line) : 0;
 	append_size = (p_append_end - p_reader->p_cursor) + 1;
 	p_reader->p_line = lmt_realloc_string(p_reader->p_line, line_len + append_size);
 	ft_memcpy(p_reader->p_line + line_len, p_reader->p_cursor, append_size);
@@ -54,7 +55,7 @@ static int	append_until_nl(t_reader *p_reader)
 **		If you freed it, set it to NULL
 */
 
-int			reader_get_line(t_reader *p_reader, char **pp_line)
+int			reader_get_line(t_lmt_reader *p_reader, char **pp_line)
 {
 	free(p_reader->p_line);
 	p_reader->p_line = NULL;

@@ -6,24 +6,23 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/19 14:02:21 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/09 15:36:52 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "t_reader.h"
-#include "lmt_util.h"
+#include <stdlib.h>	// free(), NULL
+#include "t_lmt_reader.h"
 #include "lmt_alloc.h"
 
-static	t_reader	*reader_alloc(void)
+static	t_lmt_reader	*reader_alloc(void)
 {
-	t_reader	*p_reader;
+	t_lmt_reader	*p_reader;
 
-	p_reader = lmt_alloc(sizeof(t_reader));
+	p_reader = lmt_alloc(sizeof(t_lmt_reader));
 	return (p_reader);
 }
 
-static	void		reader_init(t_reader *p_reader, int fd)
+static	void		reader_init(t_lmt_reader *p_reader, int fd)
 {
 	p_reader->fd = fd;
 	p_reader->reads_len = 0;
@@ -31,16 +30,16 @@ static	void		reader_init(t_reader *p_reader, int fd)
 	p_reader->p_line = NULL;
 }
 
-t_reader	*reader_new(int fd)
+t_lmt_reader	*reader_new(int fd)
 {
-	t_reader	*p_reader;
+	t_lmt_reader	*p_reader;
 
 	p_reader = reader_alloc();
 	reader_init(p_reader, fd);
 	return (p_reader);
 }
 
-void		reader_free(t_reader *p_reader)
+void		reader_free(t_lmt_reader *p_reader)
 {
 	free(p_reader->p_line);
 	free(p_reader);

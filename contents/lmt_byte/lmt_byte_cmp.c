@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lmt_c_library.h                                    :+:      :+:    :+:   */
+/*   t_lmt_byte_cmp.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 13:43:45 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/09 15:39:52 by jeonpark         ###   ########.fr       */
+/*   Created: 2021/10/09 14:59:46 by jeonpark          #+#    #+#             */
+/*   Updated: 2021/10/09 15:32:53 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LMT_C_LIBRARY_H
-# define LMT_C_LIBRARY_H
+#include <stddef.h>	// size_t
+#include "t_lmt_byte.h"
+#include "lmt_constant.h"
 
-# include "lmt_alloc.h"
-# include "t_lmt_byte.h"
-# include "lmt_constant.h"
-# include "lmt_fcntl.h"
-# include "lmt_io.h"
-# include "lmt_primitive_type.h"
-# include "t_lmt_sequence.h"
-# include "t_lmt_string.h"
-# include "lmt_unsafe.h"
-
-#endif
+///	- parameters:
+///		- lhs: non-optional
+///		- rhs: non-optional
+int	lmt_byte_cmp(const t_lmt_byte *lhs, const t_lmt_byte *rhs, size_t count)
+{
+	while (count > 0)
+	{
+		if (*lhs++ != *rhs++)
+			return (FALSE);
+		--count;
+	}
+	return (TRUE);
+}

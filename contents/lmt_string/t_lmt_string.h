@@ -6,17 +6,18 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 17:02:52 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/21 13:59:31 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/09 12:49:24 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef T_LMT_STRING_H
 # define T_LMT_STRING_H
 
-# include <stddef.h>
+# include <stddef.h>	// size_t
 
 //	lmt_alloc(), free(), lmt_unsafe_strchr()
 
+///	- property: value is always not null
 typedef struct s_lmt_string
 {
 	char	*value;
