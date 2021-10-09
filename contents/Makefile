@@ -15,6 +15,7 @@ SRCS				:= \
 					   lmt_primitive_type/lmt_is_space.c \
 					   lmt_primitive_type/lmt_itoa.c \
 					   lmt_primitive_type/lmt_ltoa.c \
+					   lmt_primitive_type/lmt_str_equals.c \
 					   lmt_sequence/t_lmt_sequence_element_method.c \
 					   lmt_sequence/t_lmt_sequence_element_type.c \
 					   lmt_sequence/t_lmt_sequence_method.c \
