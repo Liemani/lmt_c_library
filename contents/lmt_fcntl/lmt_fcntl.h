@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 15:33:29 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/09 15:35:30 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/11 20:03:57 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <fcntl.h>	// mode_t
 
-int		lmt_open(const char *path, int oflag, mode_t mode);
 void	lmt_close(int fd);
 
 #endif

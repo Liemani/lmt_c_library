@@ -4,7 +4,6 @@ SRCS				:= \
 					   lmt_alloc/lmt_alloc.c \
 					   lmt_byte/lmt_byte_cmp.c \
 					   lmt_fcntl/lmt_close.c \
-					   lmt_fcntl/lmt_open.c \
 					   lmt_io/lmt_put_ch.c \
 					   lmt_io/lmt_read.c \
 					   lmt_io/lmt_write.c \
