@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/10/14 15:06:42 by jeonpark          #+#    #+#              #
+#    Updated: 2021/10/14 15:06:47 by jeonpark         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME				:= liblmt_c_library.a
 
 SRCS				:= \
@@ -44,6 +56,7 @@ ABSTRACT_INCLUDE	:= \
 					   lmt_string \
 					   lmt_unsafe \
 					   .
+
 INCLUDE				:= $(addprefix -I ,$(ABSTRACT_INCLUDE))
 
 LIBRARY				:=
