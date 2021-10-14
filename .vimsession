@@ -118,6 +118,7 @@ tabnew
 tabnew
 tabnew
 tabnew
+tabnew
 tabrewind
 edit NetrwTreeListing
 set splitbelow splitright
@@ -138,10 +139,10 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 79 + 158) / 317)
-exe 'vert 2resize ' . ((&columns * 79 + 158) / 317)
-exe 'vert 3resize ' . ((&columns * 78 + 158) / 317)
-exe 'vert 4resize ' . ((&columns * 78 + 158) / 317)
+exe 'vert 1resize ' . ((&columns * 80 + 160) / 320)
+exe 'vert 2resize ' . ((&columns * 80 + 160) / 320)
+exe 'vert 3resize ' . ((&columns * 78 + 160) / 320)
+exe 'vert 4resize ' . ((&columns * 79 + 160) / 320)
 argglobal
 if bufexists("NetrwTreeListing") | buffer NetrwTreeListing | else | edit NetrwTreeListing | endif
 let s:cpo_save=&cpo
@@ -154,17 +155,17 @@ nmap <buffer> <nowait> <silent> % <Plug>NetrwOpenFile
 nmap <buffer> <nowait> <silent> - <Plug>NetrwBrowseUpDir
 nmap <buffer> <nowait> <silent> C <Plug>NetrwSetChgwin
 nmap <buffer> <nowait> <silent> a <Plug>NetrwHide_a
-nmap <buffer> <nowait> <silent> cd <Plug>NetrwLcd
-nmap <buffer> <nowait> <silent> cB <Plug>NetrwBadd_cB
 nmap <buffer> <nowait> <silent> cb <Plug>NetrwBadd_cb
+nmap <buffer> <nowait> <silent> cB <Plug>NetrwBadd_cB
+nmap <buffer> <nowait> <silent> cd <Plug>NetrwLcd
 nmap <buffer> <nowait> <silent> gb <Plug>NetrwBookHistHandler_gb
-nnoremap <buffer> <F1> :he netrw-quickhelp
-nmap <buffer> <nowait> <silent> <S-CR> <Plug>NetrwTreeSqueeze
-nnoremap <buffer> <silent> <S-Up> :Pexplore
-nnoremap <buffer> <silent> <S-Down> :Nexplore
-nmap <buffer> <C-H> <Plug>NetrwHideEdit
-nmap <buffer> <nowait> <silent> <C-R> <Plug>NetrwServerEdit
 nmap <buffer> <nowait> <silent> <C-L> <Plug>NetrwRefresh
+nmap <buffer> <nowait> <silent> <C-R> <Plug>NetrwServerEdit
+nmap <buffer> <C-H> <Plug>NetrwHideEdit
+nnoremap <buffer> <silent> <S-Down> :Nexplore
+nnoremap <buffer> <silent> <S-Up> :Pexplore
+nmap <buffer> <nowait> <silent> <S-CR> <Plug>NetrwTreeSqueeze
+nnoremap <buffer> <F1> :he netrw-quickhelp
 let &cpo=s:cpo_save
 unlet s:cpo_save
 setlocal autoindent
@@ -180,7 +181,7 @@ setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
+setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
 setlocal commentstring=/*%s*/
 setlocal complete=.,w,b,u,t,i
 setlocal completefunc=
@@ -211,7 +212,7 @@ setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=foldtext()
 setlocal formatexpr=
-setlocal formatoptions=croql
+setlocal formatoptions=tcq
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal formatprg=
 setlocal grepprg=
@@ -663,10 +664,10 @@ normal! zt
 normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
-exe 'vert 1resize ' . ((&columns * 79 + 158) / 317)
-exe 'vert 2resize ' . ((&columns * 79 + 158) / 317)
-exe 'vert 3resize ' . ((&columns * 78 + 158) / 317)
-exe 'vert 4resize ' . ((&columns * 78 + 158) / 317)
+exe 'vert 1resize ' . ((&columns * 80 + 160) / 320)
+exe 'vert 2resize ' . ((&columns * 80 + 160) / 320)
+exe 'vert 3resize ' . ((&columns * 78 + 160) / 320)
+exe 'vert 4resize ' . ((&columns * 79 + 160) / 320)
 tabnext
 edit ~/git/lmt_c_library/contents/lmt_alloc/lmt_alloc.c
 set splitbelow splitright
@@ -681,8 +682,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 159 + 158) / 317)
-exe 'vert 2resize ' . ((&columns * 157 + 158) / 317)
+exe 'vert 1resize ' . ((&columns * 161 + 160) / 320)
+exe 'vert 2resize ' . ((&columns * 158 + 160) / 320)
 argglobal
 setlocal autoindent
 setlocal backupcopy=
@@ -932,8 +933,8 @@ normal! zt
 normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
-exe 'vert 1resize ' . ((&columns * 159 + 158) / 317)
-exe 'vert 2resize ' . ((&columns * 157 + 158) / 317)
+exe 'vert 1resize ' . ((&columns * 161 + 160) / 320)
+exe 'vert 2resize ' . ((&columns * 158 + 160) / 320)
 tabnext
 edit ~/git/lmt_c_library/contents/lmt_byte/lmt_byte_cmp.c
 set splitbelow splitright
@@ -948,8 +949,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 158 + 158) / 317)
-exe 'vert 2resize ' . ((&columns * 158 + 158) / 317)
+exe 'vert 1resize ' . ((&columns * 160 + 160) / 320)
+exe 'vert 2resize ' . ((&columns * 159 + 160) / 320)
 argglobal
 if bufexists("~/git/lmt_c_library/contents/lmt_byte/lmt_byte_cmp.c") | buffer ~/git/lmt_c_library/contents/lmt_byte/lmt_byte_cmp.c | else | edit ~/git/lmt_c_library/contents/lmt_byte/lmt_byte_cmp.c | endif
 setlocal autoindent
@@ -1200,8 +1201,414 @@ normal! zt
 normal! 033|
 lcd ~/git/lmt_c_library
 wincmd w
-exe 'vert 1resize ' . ((&columns * 158 + 158) / 317)
-exe 'vert 2resize ' . ((&columns * 158 + 158) / 317)
+exe 'vert 1resize ' . ((&columns * 160 + 160) / 320)
+exe 'vert 2resize ' . ((&columns * 159 + 160) / 320)
+tabnext
+edit ~/git/lmt_c_library/contents/lmt_double_linked_list/t_lmt_double_linked_list_type.c
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe '1resize ' . ((&lines * 55 + 56) / 113)
+exe 'vert 1resize ' . ((&columns * 160 + 160) / 320)
+exe '2resize ' . ((&lines * 54 + 56) / 113)
+exe 'vert 2resize ' . ((&columns * 160 + 160) / 320)
+exe 'vert 3resize ' . ((&columns * 159 + 160) / 320)
+argglobal
+if bufexists("~/git/lmt_c_library/contents/lmt_double_linked_list/t_lmt_double_linked_list_type.c") | buffer ~/git/lmt_c_library/contents/lmt_double_linked_list/t_lmt_double_linked_list_type.c | else | edit ~/git/lmt_c_library/contents/lmt_double_linked_list/t_lmt_double_linked_list_type.c | endif
+setlocal autoindent
+setlocal backupcopy=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal cindent
+setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
+setlocal commentstring=/*%s*/
+setlocal complete=.,w,b,u,t,i
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal cursorlineopt=both
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal noexpandtab
+if &filetype != 'c'
+setlocal filetype=c
+endif
+setlocal fixendofline
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=croql
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatprg=
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=
+setlocal includeexpr=
+setlocal indentexpr=
+setlocal indentkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal nolist
+setlocal makeencoding=
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=bin,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=ccomplete#Complete
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal noscrollbind
+setlocal scrolloff=-1
+setlocal shiftwidth=4
+setlocal noshortname
+setlocal showbreak=
+setlocal sidescrolloff=-1
+setlocal signcolumn=auto
+setlocal smartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'c'
+setlocal syntax=c
+endif
+setlocal tabstop=4
+setlocal tagcase=
+setlocal tagfunc=
+setlocal tags=
+setlocal termwinkey=
+setlocal termwinscroll=10000
+setlocal termwinsize=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal wincolor=
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+silent! normal! zE
+1,12fold
+let s:l = 23 - ((22 * winheight(0) + 27) / 55)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+23
+normal! 08|
+lcd ~/git/lmt_c_library
+wincmd w
+argglobal
+if bufexists("~/git/lmt_c_library/contents/lmt_double_linked_list/t_lmt_double_linked_list_method.c") | buffer ~/git/lmt_c_library/contents/lmt_double_linked_list/t_lmt_double_linked_list_method.c | else | edit ~/git/lmt_c_library/contents/lmt_double_linked_list/t_lmt_double_linked_list_method.c | endif
+setlocal autoindent
+setlocal backupcopy=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal cindent
+setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
+setlocal commentstring=/*%s*/
+setlocal complete=.,w,b,u,t,i
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal cursorlineopt=both
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal noexpandtab
+if &filetype != 'c'
+setlocal filetype=c
+endif
+setlocal fixendofline
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=croql
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatprg=
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=
+setlocal includeexpr=
+setlocal indentexpr=
+setlocal indentkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal nolist
+setlocal makeencoding=
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=bin,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=ccomplete#Complete
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal noscrollbind
+setlocal scrolloff=-1
+setlocal shiftwidth=4
+setlocal noshortname
+setlocal showbreak=
+setlocal sidescrolloff=-1
+setlocal signcolumn=auto
+setlocal smartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'c'
+setlocal syntax=c
+endif
+setlocal tabstop=4
+setlocal tagcase=
+setlocal tagfunc=
+setlocal tags=
+setlocal termwinkey=
+setlocal termwinscroll=10000
+setlocal termwinsize=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal wincolor=
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+silent! normal! zE
+1,12fold
+let s:l = 15 - ((14 * winheight(0) + 27) / 54)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+15
+normal! 071|
+lcd ~/git/lmt_c_library
+wincmd w
+argglobal
+if bufexists("~/git/lmt_c_library/contents/lmt_double_linked_list/t_lmt_double_linked_list.h") | buffer ~/git/lmt_c_library/contents/lmt_double_linked_list/t_lmt_double_linked_list.h | else | edit ~/git/lmt_c_library/contents/lmt_double_linked_list/t_lmt_double_linked_list.h | endif
+setlocal autoindent
+setlocal backupcopy=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal cindent
+setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
+setlocal commentstring=/*%s*/
+setlocal complete=.,w,b,u,t,i
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal cursorlineopt=both
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal noexpandtab
+if &filetype != 'cpp'
+setlocal filetype=cpp
+endif
+setlocal fixendofline
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=croql
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatprg=
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=
+setlocal includeexpr=
+setlocal indentexpr=
+setlocal indentkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal nolist
+setlocal makeencoding=
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=bin,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=ccomplete#Complete
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal noscrollbind
+setlocal scrolloff=-1
+setlocal shiftwidth=4
+setlocal noshortname
+setlocal showbreak=
+setlocal sidescrolloff=-1
+setlocal signcolumn=auto
+setlocal smartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'cpp'
+setlocal syntax=cpp
+endif
+setlocal tabstop=4
+setlocal tagcase=
+setlocal tagfunc=
+setlocal tags=
+setlocal termwinkey=
+setlocal termwinscroll=10000
+setlocal termwinsize=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal wincolor=
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+silent! normal! zE
+1,12fold
+1
+normal! zo
+let s:l = 37 - ((36 * winheight(0) + 55) / 110)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+37
+normal! 032|
+lcd ~/git/lmt_c_library
+wincmd w
+2wincmd w
+exe '1resize ' . ((&lines * 55 + 56) / 113)
+exe 'vert 1resize ' . ((&columns * 160 + 160) / 320)
+exe '2resize ' . ((&lines * 54 + 56) / 113)
+exe 'vert 2resize ' . ((&columns * 160 + 160) / 320)
+exe 'vert 3resize ' . ((&columns * 159 + 160) / 320)
 tabnext
 edit ~/git/lmt_c_library/contents/lmt_fcntl/lmt_close.c
 set splitbelow splitright
@@ -1216,8 +1623,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 158 + 158) / 317)
-exe 'vert 2resize ' . ((&columns * 158 + 158) / 317)
+exe 'vert 1resize ' . ((&columns * 160 + 160) / 320)
+exe 'vert 2resize ' . ((&columns * 159 + 160) / 320)
 argglobal
 if bufexists("~/git/lmt_c_library/contents/lmt_fcntl/lmt_close.c") | buffer ~/git/lmt_c_library/contents/lmt_fcntl/lmt_close.c | else | edit ~/git/lmt_c_library/contents/lmt_fcntl/lmt_close.c | endif
 setlocal autoindent
@@ -1468,8 +1875,8 @@ normal! zt
 normal! 028|
 lcd ~/git/lmt_c_library
 wincmd w
-exe 'vert 1resize ' . ((&columns * 158 + 158) / 317)
-exe 'vert 2resize ' . ((&columns * 158 + 158) / 317)
+exe 'vert 1resize ' . ((&columns * 160 + 160) / 320)
+exe 'vert 2resize ' . ((&columns * 159 + 160) / 320)
 tabnext
 edit ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_atoi.c
 set splitbelow splitright
@@ -1509,22 +1916,22 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe '1resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 1resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 1resize ' . ((&columns * 80 + 160) / 320)
 exe '2resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 2resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 2resize ' . ((&columns * 80 + 160) / 320)
 exe '3resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 3resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 3resize ' . ((&columns * 80 + 160) / 320)
 exe '4resize ' . ((&lines * 55 + 56) / 113)
-exe 'vert 4resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 4resize ' . ((&columns * 80 + 160) / 320)
 exe '5resize ' . ((&lines * 54 + 56) / 113)
-exe 'vert 5resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 5resize ' . ((&columns * 80 + 160) / 320)
 exe '6resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 6resize ' . ((&columns * 78 + 158) / 317)
+exe 'vert 6resize ' . ((&columns * 78 + 160) / 320)
 exe '7resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 7resize ' . ((&columns * 78 + 158) / 317)
+exe 'vert 7resize ' . ((&columns * 78 + 160) / 320)
 exe '8resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 8resize ' . ((&columns * 78 + 158) / 317)
-exe 'vert 9resize ' . ((&columns * 78 + 158) / 317)
+exe 'vert 8resize ' . ((&columns * 78 + 160) / 320)
+exe 'vert 9resize ' . ((&columns * 79 + 160) / 320)
 argglobal
 if bufexists("~/git/lmt_c_library/contents/lmt_primitive_type/lmt_atoi.c") | buffer ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_atoi.c | else | edit ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_atoi.c | endif
 setlocal autoindent
@@ -2651,22 +3058,22 @@ normal! 053|
 lcd ~/git/lmt_c_library
 wincmd w
 exe '1resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 1resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 1resize ' . ((&columns * 80 + 160) / 320)
 exe '2resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 2resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 2resize ' . ((&columns * 80 + 160) / 320)
 exe '3resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 3resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 3resize ' . ((&columns * 80 + 160) / 320)
 exe '4resize ' . ((&lines * 55 + 56) / 113)
-exe 'vert 4resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 4resize ' . ((&columns * 80 + 160) / 320)
 exe '5resize ' . ((&lines * 54 + 56) / 113)
-exe 'vert 5resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 5resize ' . ((&columns * 80 + 160) / 320)
 exe '6resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 6resize ' . ((&columns * 78 + 158) / 317)
+exe 'vert 6resize ' . ((&columns * 78 + 160) / 320)
 exe '7resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 7resize ' . ((&columns * 78 + 158) / 317)
+exe 'vert 7resize ' . ((&columns * 78 + 160) / 320)
 exe '8resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 8resize ' . ((&columns * 78 + 158) / 317)
-exe 'vert 9resize ' . ((&columns * 78 + 158) / 317)
+exe 'vert 8resize ' . ((&columns * 78 + 160) / 320)
+exe 'vert 9resize ' . ((&columns * 79 + 160) / 320)
 tabnext
 edit ~/git/lmt_c_library/contents/lmt_io/lmt_read.c
 set splitbelow splitright
@@ -2687,10 +3094,10 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 79 + 158) / 317)
-exe 'vert 2resize ' . ((&columns * 79 + 158) / 317)
-exe 'vert 3resize ' . ((&columns * 78 + 158) / 317)
-exe 'vert 4resize ' . ((&columns * 78 + 158) / 317)
+exe 'vert 1resize ' . ((&columns * 80 + 160) / 320)
+exe 'vert 2resize ' . ((&columns * 80 + 160) / 320)
+exe 'vert 3resize ' . ((&columns * 78 + 160) / 320)
+exe 'vert 4resize ' . ((&columns * 79 + 160) / 320)
 argglobal
 if bufexists("~/git/lmt_c_library/contents/lmt_io/lmt_read.c") | buffer ~/git/lmt_c_library/contents/lmt_io/lmt_read.c | else | edit ~/git/lmt_c_library/contents/lmt_io/lmt_read.c | endif
 setlocal autoindent
@@ -3191,10 +3598,10 @@ normal! zt
 normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
-exe 'vert 1resize ' . ((&columns * 79 + 158) / 317)
-exe 'vert 2resize ' . ((&columns * 79 + 158) / 317)
-exe 'vert 3resize ' . ((&columns * 78 + 158) / 317)
-exe 'vert 4resize ' . ((&columns * 78 + 158) / 317)
+exe 'vert 1resize ' . ((&columns * 80 + 160) / 320)
+exe 'vert 2resize ' . ((&columns * 80 + 160) / 320)
+exe 'vert 3resize ' . ((&columns * 78 + 160) / 320)
+exe 'vert 4resize ' . ((&columns * 79 + 160) / 320)
 tabnext
 edit ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_element_type.c
 set splitbelow splitright
@@ -3228,19 +3635,19 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe '1resize ' . ((&lines * 55 + 56) / 113)
-exe 'vert 1resize ' . ((&columns * 105 + 158) / 317)
+exe 'vert 1resize ' . ((&columns * 106 + 160) / 320)
 exe '2resize ' . ((&lines * 54 + 56) / 113)
-exe 'vert 2resize ' . ((&columns * 105 + 158) / 317)
+exe 'vert 2resize ' . ((&columns * 106 + 160) / 320)
 exe '3resize ' . ((&lines * 55 + 56) / 113)
-exe 'vert 3resize ' . ((&columns * 106 + 158) / 317)
+exe 'vert 3resize ' . ((&columns * 107 + 160) / 320)
 exe '4resize ' . ((&lines * 54 + 56) / 113)
-exe 'vert 4resize ' . ((&columns * 106 + 158) / 317)
+exe 'vert 4resize ' . ((&columns * 107 + 160) / 320)
 exe '5resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 5resize ' . ((&columns * 104 + 158) / 317)
+exe 'vert 5resize ' . ((&columns * 105 + 160) / 320)
 exe '6resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 6resize ' . ((&columns * 104 + 158) / 317)
+exe 'vert 6resize ' . ((&columns * 105 + 160) / 320)
 exe '7resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 7resize ' . ((&columns * 104 + 158) / 317)
+exe 'vert 7resize ' . ((&columns * 105 + 160) / 320)
 argglobal
 if bufexists("~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_element_type.c") | buffer ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_element_type.c | else | edit ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_element_type.c | endif
 setlocal autoindent
@@ -4130,19 +4537,19 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 exe '1resize ' . ((&lines * 55 + 56) / 113)
-exe 'vert 1resize ' . ((&columns * 105 + 158) / 317)
+exe 'vert 1resize ' . ((&columns * 106 + 160) / 320)
 exe '2resize ' . ((&lines * 54 + 56) / 113)
-exe 'vert 2resize ' . ((&columns * 105 + 158) / 317)
+exe 'vert 2resize ' . ((&columns * 106 + 160) / 320)
 exe '3resize ' . ((&lines * 55 + 56) / 113)
-exe 'vert 3resize ' . ((&columns * 106 + 158) / 317)
+exe 'vert 3resize ' . ((&columns * 107 + 160) / 320)
 exe '4resize ' . ((&lines * 54 + 56) / 113)
-exe 'vert 4resize ' . ((&columns * 106 + 158) / 317)
+exe 'vert 4resize ' . ((&columns * 107 + 160) / 320)
 exe '5resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 5resize ' . ((&columns * 104 + 158) / 317)
+exe 'vert 5resize ' . ((&columns * 105 + 160) / 320)
 exe '6resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 6resize ' . ((&columns * 104 + 158) / 317)
+exe 'vert 6resize ' . ((&columns * 105 + 160) / 320)
 exe '7resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 7resize ' . ((&columns * 104 + 158) / 317)
+exe 'vert 7resize ' . ((&columns * 105 + 160) / 320)
 tabnext
 edit ~/git/lmt_c_library/contents/lmt_string/t_lmt_string_type.c
 set splitbelow splitright
@@ -4160,9 +4567,9 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 105 + 158) / 317)
-exe 'vert 2resize ' . ((&columns * 106 + 158) / 317)
-exe 'vert 3resize ' . ((&columns * 104 + 158) / 317)
+exe 'vert 1resize ' . ((&columns * 106 + 160) / 320)
+exe 'vert 2resize ' . ((&columns * 107 + 160) / 320)
+exe 'vert 3resize ' . ((&columns * 105 + 160) / 320)
 argglobal
 if bufexists("~/git/lmt_c_library/contents/lmt_string/t_lmt_string_type.c") | buffer ~/git/lmt_c_library/contents/lmt_string/t_lmt_string_type.c | else | edit ~/git/lmt_c_library/contents/lmt_string/t_lmt_string_type.c | endif
 setlocal autoindent
@@ -4538,9 +4945,9 @@ normal! zt
 normal! 017|
 lcd ~/git/lmt_c_library
 wincmd w
-exe 'vert 1resize ' . ((&columns * 105 + 158) / 317)
-exe 'vert 2resize ' . ((&columns * 106 + 158) / 317)
-exe 'vert 3resize ' . ((&columns * 104 + 158) / 317)
+exe 'vert 1resize ' . ((&columns * 106 + 160) / 320)
+exe 'vert 2resize ' . ((&columns * 107 + 160) / 320)
+exe 'vert 3resize ' . ((&columns * 105 + 160) / 320)
 tabnext
 edit ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strchr.c
 set splitbelow splitright
@@ -4577,20 +4984,20 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe '1resize ' . ((&lines * 55 + 56) / 113)
-exe 'vert 1resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 1resize ' . ((&columns * 80 + 160) / 320)
 exe '2resize ' . ((&lines * 54 + 56) / 113)
-exe 'vert 2resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 2resize ' . ((&columns * 80 + 160) / 320)
 exe '3resize ' . ((&lines * 55 + 56) / 113)
-exe 'vert 3resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 3resize ' . ((&columns * 80 + 160) / 320)
 exe '4resize ' . ((&lines * 54 + 56) / 113)
-exe 'vert 4resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 4resize ' . ((&columns * 80 + 160) / 320)
 exe '5resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 5resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 5resize ' . ((&columns * 79 + 160) / 320)
 exe '6resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 6resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 6resize ' . ((&columns * 79 + 160) / 320)
 exe '7resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 7resize ' . ((&columns * 79 + 158) / 317)
-exe 'vert 8resize ' . ((&columns * 77 + 158) / 317)
+exe 'vert 7resize ' . ((&columns * 79 + 160) / 320)
+exe 'vert 8resize ' . ((&columns * 78 + 160) / 320)
 argglobal
 if bufexists("~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strchr.c") | buffer ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strchr.c | else | edit ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe_strchr.c | endif
 setlocal autoindent
@@ -5592,20 +5999,20 @@ normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 exe '1resize ' . ((&lines * 55 + 56) / 113)
-exe 'vert 1resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 1resize ' . ((&columns * 80 + 160) / 320)
 exe '2resize ' . ((&lines * 54 + 56) / 113)
-exe 'vert 2resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 2resize ' . ((&columns * 80 + 160) / 320)
 exe '3resize ' . ((&lines * 55 + 56) / 113)
-exe 'vert 3resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 3resize ' . ((&columns * 80 + 160) / 320)
 exe '4resize ' . ((&lines * 54 + 56) / 113)
-exe 'vert 4resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 4resize ' . ((&columns * 80 + 160) / 320)
 exe '5resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 5resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 5resize ' . ((&columns * 79 + 160) / 320)
 exe '6resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 6resize ' . ((&columns * 79 + 158) / 317)
+exe 'vert 6resize ' . ((&columns * 79 + 160) / 320)
 exe '7resize ' . ((&lines * 36 + 56) / 113)
-exe 'vert 7resize ' . ((&columns * 79 + 158) / 317)
-exe 'vert 8resize ' . ((&columns * 77 + 158) / 317)
+exe 'vert 7resize ' . ((&columns * 79 + 160) / 320)
+exe 'vert 8resize ' . ((&columns * 78 + 160) / 320)
 tabnext
 edit ~/git/lmt_c_library/README.txt
 set splitbelow splitright
@@ -5778,13 +6185,13 @@ badd +1 ~/git/lmt_c_library/contents/lmt_sequence/t_lmt_sequence_element.h
 badd +1 ~/git/lmt_c_library/contents/lmt_string/t_lmt_string.h
 badd +1 ~/git/lmt_c_library/contents/lmt_unsafe/lmt_unsafe.h
 badd +1 ~/git/lmt_c_library/contents/lmt_byte/lmt_byte_cmp.c
-badd +16 ~/git/lmt_c_library/contents/lmt_fcntl/lmt_open.c
+badd +1 ~/git/lmt_c_library/contents/lmt_fcntl/lmt_close.c
 badd +1 ~/git/lmt_c_library/README.txt
 badd +1 ~/git/lmt_c_library/contents/Makefile
 badd +1 ~/git/lmt_c_library/contents/lmt_byte/t_lmt_byte.h
-badd +1 ~/git/lmt_c_library/contents/lmt_fcntl/lmt_close.c
 badd +1 ~/git/lmt_c_library/contents/lmt_fcntl/lmt_fcntl.h
-badd +0 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_str_equals.c
+badd +1 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_str_equals.c
+badd +16 ~/git/lmt_c_library/contents/lmt_fcntl/lmt_open.c
 badd +1 ~/git/lmt_c_library/contents/lmt_reader/t_reader_method.c
 badd +13 ~/git/lmt_c_library/contents/lmt_reader/t_reader_type.c
 badd +1 ~/git/lmt_c_library/contents/lmt_reader/t_reader.h
@@ -5838,6 +6245,9 @@ badd +16 ~/git/lmt_c_library/contents/lmt_io/lmt_util.h
 badd +1 ~/git/lmt_c_library
 badd +15 ~/git/lmt_c_library/contents/lmt_byte/t_lmt_byte_cmp.c
 badd +22 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_strcmp.c
+badd +0 ~/git/lmt_c_library/contents/lmt_double_linked_list/t_lmt_double_linked_list_type.c
+badd +0 ~/git/lmt_c_library/contents/lmt_double_linked_list/t_lmt_double_linked_list_method.c
+badd +0 ~/git/lmt_c_library/contents/lmt_double_linked_list/t_lmt_double_linked_list.h
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
