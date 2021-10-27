@@ -6,7 +6,7 @@
 #    By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/14 15:06:42 by jeonpark          #+#    #+#              #
-#    Updated: 2021/10/27 19:27:29 by jeonpark         ###   ########.fr        #
+#    Updated: 2021/10/27 21:54:52 by jeonpark         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,6 @@ NAME				:= liblmt_c_library.a
 
 SRCS				:= \
 					   lmt_alloc/lmt_alloc.c \
-					   lmt_byte/lmt_byte_cmp.c \
 					   lmt_fcntl/lmt_close.c \
 					   lmt_io/lmt_put_ch.c \
 					   lmt_io/lmt_read.c \
@@ -28,7 +27,8 @@ SRCS				:= \
 					   lmt_primitive_type/lmt_is_space.c \
 					   lmt_primitive_type/lmt_itoa.c \
 					   lmt_primitive_type/lmt_ltoa.c \
-					   lmt_primitive_type/lmt_memcpy.c \
+					   lmt_primitive_type/lmt_byte_ask.c \
+					   lmt_primitive_type/lmt_byte_cpy.c \
 					   lmt_primitive_type/lmt_str_first_ch.c \
 					   lmt_primitive_type/lmt_str_first_str.c \
 					   lmt_primitive_type/lmt_str_last_ch.c \
@@ -47,7 +47,6 @@ CFLAG				:= -Wall -Wextra -Werror
 
 ABSTRACT_INCLUDE	:= \
 					   lmt_alloc \
-					   lmt_byte \
 					   lmt_fcntl \
 					   lmt_io \
 					   lmt_iterator \

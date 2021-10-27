@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 13:36:41 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/27 14:58:12 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/27 21:31:03 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		lmt_atoui(char *str, unsigned int *p_result);
 char	*lmt_itoa(int number);
 char	*lmt_ltoa(long number);
 
-///	- str function
+///	- str
 int		lmt_str_equals(const char *lhs, const char *rhs);
 int		lmt_str_has_prefix(const char *str, const char *word);
 
@@ -34,8 +34,14 @@ char	*lmt_str_first_str(char *str, const char *word);
 char	*lmt_str_last_ch(char *str, char ch);
 char	*lmt_str_last_str(char *str, const char *word);
 
-void	*lmt_memcpy(void *p_write, const void *p_read, size_t size);
-char	*lmt_strcpy(char *p_write, const char *p_read);
+char	*lmt_strcpy(char *target, const char *source);
 char	*lmt_strdup(const char *str);
+
+///	- byte
+typedef unsigned char	t_lmt_byte;
+
+int		lmt_byte_equals(const void *lhs, const void *rhs, size_t count);
+
+void	*lmt_byte_cpy(void *target, const void *source, size_t size);
 
 #endif
