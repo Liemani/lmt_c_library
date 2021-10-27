@@ -6,7 +6,7 @@
 #    By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/14 15:06:42 by jeonpark          #+#    #+#              #
-#    Updated: 2021/10/27 15:12:23 by jeonpark         ###   ########.fr        #
+#    Updated: 2021/10/27 19:27:29 by jeonpark         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,8 @@ SRCS				:= \
 					   lmt_io/lmt_put_ch.c \
 					   lmt_io/lmt_read.c \
 					   lmt_io/lmt_write.c \
+					   lmt_iterator/t_lmt_iterator_method.c \
+					   lmt_iterator/t_lmt_iterator_type.c \
 					   lmt_primitive_type/lmt_atoi.c \
 					   lmt_primitive_type/lmt_atol.c \
 					   lmt_primitive_type/lmt_atoui.c \
@@ -35,10 +37,6 @@ SRCS				:= \
 					   lmt_primitive_type/lmt_strdup.c \
 					   lmt_primitive_type/lmt_str_ask.c \
 					   lmt_primitive_type/lmt_str_count.c \
-					   lmt_sequence/t_lmt_sequence_element_method.c \
-					   lmt_sequence/t_lmt_sequence_element_type.c \
-					   lmt_sequence/t_lmt_sequence_method.c \
-					   lmt_sequence/t_lmt_sequence_type.c \
 					   lmt_string/t_lmt_string_method.c \
 					   lmt_string/t_lmt_string_type.c \
 
@@ -52,8 +50,8 @@ ABSTRACT_INCLUDE	:= \
 					   lmt_byte \
 					   lmt_fcntl \
 					   lmt_io \
+					   lmt_iterator \
 					   lmt_primitive_type \
-					   lmt_sequence \
 					   lmt_string \
 					   .
 
