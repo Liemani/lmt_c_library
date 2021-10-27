@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 23:19:28 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/05 13:57:07 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/27 14:25:35 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static unsigned long	lmt_ltoa_devide_10(unsigned long *p_number)
 	return (*p_number);
 }
 
-char					*lmt_ltoa(long number)
+char	*lmt_ltoa(long number)
 {
 	unsigned long	positive_number;
 	char			buffer[MAX_LONG_LENGTH];

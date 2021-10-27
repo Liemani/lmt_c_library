@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lmt_unsafe_strchr.c                                :+:      :+:    :+:   */
+/*   lmt_memcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/19 17:50:22 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/19 17:50:24 by jeonpark         ###   ########.fr       */
+/*   Created: 2021/06/14 22:05:04 by jeonpark          #+#    #+#             */
+/*   Updated: 2021/10/27 14:24:43 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include "lmt_unsafe.h"
+#include <stddef.h>	// size_t, NULL
+#include "lmt_primitive_type.h"
+#include "lmt_constant.h"	// t_byte
 
-char	*lmt_unsafe_strchr(char *string, char *word)
+void	*lmt_memcpy(void *target, const void *source, size_t size)
 {
-	char	*p_char;
-
-	p_char = string;
-	while (*p_char != '\0')
-	{
-		if (lmt_unsafe_string_starts(p_char, word))
-			return (p_char);
-		++p_char;
-	}
-	return (NULL);
+	if (!(target != NULL && source != NULL && size != 0))
+		return (target);
+	while (0 <= --size)
+		((t_byte *)target)[size] = ((const t_byte *)source)[size];
+	return (target);
 }

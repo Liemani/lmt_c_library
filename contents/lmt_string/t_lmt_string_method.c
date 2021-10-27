@@ -6,99 +6,111 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 17:02:53 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/20 17:02:57 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/27 14:59:45 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "t_lmt_string.h"
 #include "lmt_alloc.h"
-#include "lmt_unsafe.h"
+#include "lmt_primitive_type.h"
 
 t_lmt_string	*lmt_string_split(t_lmt_string *string, char *separator)
 {
-	char			*old_value;
+	char			*old_str;
 	char			*first_separator;
+	char			*tail_str;
 	t_lmt_string	*head_string;
 
-	old_value = string->value;
-	first_separator = lmt_unsafe_strchr(old_value, separator);
+	if (!(string != NULL && separator != NULL))
+		return (NULL);
+	old_str = string->str;
+	first_separator = lmt_str_first_str(old_str, separator);
 	if (first_separator == NULL)
 		return (NULL);
 	*first_separator = '\0';
-	head_string = lmt_string_new(old_value);
+	head_string = lmt_string_new(old_str);
+	tail_str = first_separator;
 	while (*separator != '\0')
 	{
-		++first_separator;
 		++separator;
+		++tail_str;
 	}
-	lmt_string_init(string, first_separator);
-	free(old_value);
+	lmt_string_init(string, tail_str);
+	free(old_str);
 	return (head_string);
 }
 
-/// - Assume: string->count > count
-t_lmt_string	*lmt_string_split_first(t_lmt_string *string, size_t count)
+t_lmt_string	*lmt_string_remove_first(t_lmt_string *string, size_t count)
 {
-	char			*old_value;
+	char			*old_str;
+	char			*tail_str;
 	t_lmt_string	*head_string;
 
-	old_value = string->value;
-	lmt_string_init(string, old_value + count);
-	*(old_value + count) = '\0';
-	head_string = lmt_string_new(old_value);
-	free(old_value);
+	if (!(string != NULL && 0 < count && count <= string->count))
+		return (NULL);
+	old_str = string->str;
+	tail_str = old_str + count;
+	lmt_string_init(string, tail_str);
+	*tail_str = '\0';
+	head_string = lmt_string_new(old_str);
+	free(old_str);
 	return (head_string);
 }
 
-/// - Assume: string->count > count
-t_lmt_string	*lmt_string_split_last(t_lmt_string *string, size_t count)
+t_lmt_string	*lmt_string_remove_last(t_lmt_string *string, size_t count)
 {
-	char			*old_value;
+	char			*old_str;
+	char			*tail_str;
 	t_lmt_string	*head_string;
-	size_t			split_index;
 
-	old_value = string->value;
-	split_index = string->count - count;
-	lmt_string_init(string, old_value + split_index);
-	*(old_value + split_index) = '\0';
-	head_string = lmt_string_new(old_value);
-	free(old_value);
+	if (!(string != NULL && 0 < count && count <= string->count))
+		return (NULL);
+	old_str = string->str;
+	tail_str = old_str + (string->count - count);
+	head_string = lmt_string_new(tail_str);
+	*tail_str = '\0';
+	lmt_string_init(string, old_str);
+	free(old_str);
 	return (head_string);
 }
 
-void			lmt_string_append_string(t_lmt_string *string, char *word)
+void	lmt_string_append_string(t_lmt_string *string, char *word)
 {
-	char	*old_value;
-	char	*new_value;
+	char	*old_str;
 	size_t	word_count;
+	char	*new_str;
 	char	*check_point;
 
-	if (word == NULL)
-		return;
-	old_value = string->value;
-	word_count = lmt_unsafe_strlen(word);
-	new_value = lmt_alloc(string->count + word_count + 1);
-	check_point = lmt_unsafe_strcpy(new_value, string->value);
-	check_point = lmt_unsafe_strcpy(check_point, word);
+	if (!(string != NULL && word != NULL))
+		return ;
+	old_str = string->str;
+	word_count = lmt_str_count(word);
+	new_str = lmt_alloc(string->count + word_count + 1);
+	check_point = new_str;
+	check_point = lmt_strcpy(check_point, string->str);
+	check_point = lmt_strcpy(check_point, word);
 	*check_point = '\0';
-	string->value = new_value;
-	free(old_value);
+	string->str = new_str;
+	string->count += word_count;
+	free(old_str);
 }
 
-void			lmt_string_append_lmt_string(t_lmt_string *string, t_lmt_string *word)
+void	lmt_string_append_lmt_string(t_lmt_string *string, t_lmt_string *word)
 {
-	char	*old_value;
-	char	*new_value;
+	char	*old_str;
+	char	*new_str;
 	char	*check_point;
 
 	if (word == NULL)
-		return;
-	old_value = string->value;
-	new_value = lmt_alloc(string->count + word->count + 1);
-	check_point = lmt_unsafe_strcpy(new_value, string->value);
-	check_point = lmt_unsafe_strcpy(check_point, word->value);
+		return ;
+	old_str = string->str;
+	new_str = lmt_alloc(string->count + word->count + 1);
+	check_point = new_str;
+	check_point = lmt_strcpy(check_point, string->str);
+	check_point = lmt_strcpy(check_point, word->str);
 	*check_point = '\0';
-	string->value = new_value;
-	free(old_value);
+	string->str = new_str;
+	string->count += word->count;
+	free(old_str);
 }

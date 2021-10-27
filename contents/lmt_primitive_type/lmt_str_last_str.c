@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lmt_unsafe_memcpy.c                                :+:      :+:    :+:   */
+/*   lmt_str_last_str.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/14 22:05:04 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/19 20:18:48 by jeonpark         ###   ########.fr       */
+/*   Created: 2021/09/19 17:50:21 by jeonpark          #+#    #+#             */
+/*   Updated: 2021/10/27 14:01:17 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include "lmt_unsafe.h"
-#include "lmt_constant.h"
+#include <stddef.h>	// NULL
+#include "lmt_primitive_type.h"
 
-void	*lmt_unsafe_memcpy(void *p_write, const void *p_read, size_t size)
+char	*lmt_str_last_str(char *str, const char *word)
 {
-	while (size > 0)
+	char	*output;
+
+	if (!(str != NULL && word != NULL))
+		return (NULL);
+	output = str;
+	while (*output != '\0')
+		++output;
+	while (str <= output)
 	{
-		*(t_byte *)p_write++ = *(const t_byte *)p_read++;
-		--size;
+		if (lmt_str_has_prefix(output, word))
+			return (output);
+		--output;
 	}
-	return (p_write);
+	return (NULL);
 }

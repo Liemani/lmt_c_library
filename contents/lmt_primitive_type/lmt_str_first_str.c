@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lmt_unsafe_strrchr.c                               :+:      :+:    :+:   */
+/*   lmt_str_first_str.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/19 17:50:21 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/19 17:50:25 by jeonpark         ###   ########.fr       */
+/*   Created: 2021/10/27 13:29:43 by jeonpark          #+#    #+#             */
+/*   Updated: 2021/10/27 14:24:23 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include "lmt_unsafe.h"
+#include <stddef.h>	// NULL
+#include "lmt_primitive_type.h"
 
-char	*lmt_unsafe_strrchr(char *string, char *word)
+char	*lmt_str_first_str(char *str, const char *word)
 {
-	char	*p_char;
+	char	*output;
 
-	p_char = string;
-	while (*p_char != '\0')
-		++p_char;
-	while (string < p_char)
+	if (!(str != NULL && word != NULL))
+		return (NULL);
+	output = str;
+	while (*output != '\0')
 	{
-		--p_char;
-		if (lmt_unsafe_string_starts(p_char, word))
-			return (p_char);
+		if (lmt_str_has_prefix(output, word))
+			return (output);
+		++output;
 	}
-	return (NULL);
+	return (output);
 }

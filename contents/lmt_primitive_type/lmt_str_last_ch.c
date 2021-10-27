@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lmt_unsafe_strcpy.c                                :+:      :+:    :+:   */
+/*   lmt_str_last_ch.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/21 20:13:27 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/09/21 20:13:31 by jeonpark         ###   ########.fr       */
+/*   Created: 2021/10/27 13:51:16 by jeonpark          #+#    #+#             */
+/*   Updated: 2021/10/27 13:59:35 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lmt_unsafe.h"
+#include "lmt_primitive_type.h"
 
-void	*lmt_unsafe_strcpy(char *p_write, const char *p_read)
+char	*lmt_str_last_ch(char *str, char ch)
 {
-	while (*p_read != '\0')
-		*p_write++ = *p_read++;
-	return (p_write);
+	char	*output;
+
+	if (!(str != NULL))
+		return (NULL);
+	output = str;
+	while (*output != '\0')
+		++output;
+	while (str <= output)
+	{
+		if (*output == ch)
+			return (output);
+		--output;
+	}
+	return (NULL);
 }

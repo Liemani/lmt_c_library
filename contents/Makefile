@@ -6,7 +6,7 @@
 #    By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/14 15:06:42 by jeonpark          #+#    #+#              #
-#    Updated: 2021/10/14 15:06:47 by jeonpark         ###   ########.fr        #
+#    Updated: 2021/10/27 15:12:23 by jeonpark         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,20 +26,21 @@ SRCS				:= \
 					   lmt_primitive_type/lmt_is_space.c \
 					   lmt_primitive_type/lmt_itoa.c \
 					   lmt_primitive_type/lmt_ltoa.c \
-					   lmt_primitive_type/lmt_str_equals.c \
+					   lmt_primitive_type/lmt_memcpy.c \
+					   lmt_primitive_type/lmt_str_first_ch.c \
+					   lmt_primitive_type/lmt_str_first_str.c \
+					   lmt_primitive_type/lmt_str_last_ch.c \
+					   lmt_primitive_type/lmt_str_last_str.c \
+					   lmt_primitive_type/lmt_strcpy.c \
+					   lmt_primitive_type/lmt_strdup.c \
+					   lmt_primitive_type/lmt_str_ask.c \
+					   lmt_primitive_type/lmt_str_count.c \
 					   lmt_sequence/t_lmt_sequence_element_method.c \
 					   lmt_sequence/t_lmt_sequence_element_type.c \
 					   lmt_sequence/t_lmt_sequence_method.c \
 					   lmt_sequence/t_lmt_sequence_type.c \
 					   lmt_string/t_lmt_string_method.c \
 					   lmt_string/t_lmt_string_type.c \
-					   lmt_unsafe/lmt_unsafe_memcpy.c \
-					   lmt_unsafe/lmt_unsafe_strchr.c \
-					   lmt_unsafe/lmt_unsafe_strcpy.c \
-					   lmt_unsafe/lmt_unsafe_strdup.c \
-					   lmt_unsafe/lmt_unsafe_string_starts.c \
-					   lmt_unsafe/lmt_unsafe_strlen.c \
-					   lmt_unsafe/lmt_unsafe_strrchr.c
 
 OBJS				:= $(SRCS:.c=.o)
 
@@ -54,7 +55,6 @@ ABSTRACT_INCLUDE	:= \
 					   lmt_primitive_type \
 					   lmt_sequence \
 					   lmt_string \
-					   lmt_unsafe \
 					   .
 
 INCLUDE				:= $(addprefix -I ,$(ABSTRACT_INCLUDE))
