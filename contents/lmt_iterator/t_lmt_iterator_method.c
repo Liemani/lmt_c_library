@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 19:09:09 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/27 20:27:10 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/28 14:42:49 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,32 +18,32 @@ void	lmt_iterator_for_each(t_lmt_iterator *iter,
 {
 	void	*element;
 
-	if (iter->first == NULL)
+	if (!(iter != NULL && iter->first != NULL && function != NULL))
 		return ;
 	element = iter->first;
 	while (element != iter->last)
 	{
-		function(element);
+		function(iter->get_input(element));
 		element = iter->next(element);
 	}
-	function(element);
+	function(iter->get_input(element));
 }
 
-void	lmt_iterator_enumerated_for_each(t_lmt_iterator *iter,
-		t_lmt_iterator_enumerated_for_each function)
+void	lmt_iterator_for_each_enumerated(t_lmt_iterator *iter,
+		t_lmt_iterator_for_each_enumerated function)
 {
 	void	*element;
 	size_t	index;
 
-	if (iter->first == NULL)
+	if (!(iter != NULL && iter->first != NULL && function != NULL))
 		return ;
 	element = iter->first;
 	index = 0;
 	while (element != iter->last)
 	{
-		function(index, element);
+		function(index, iter->get_input(element));
 		element = iter->next(element);
 		++index;
 	}
-	function(index, element);
+	function(index, iter->get_input(element));
 }

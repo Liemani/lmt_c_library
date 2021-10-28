@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:47:26 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/28 12:07:42 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/28 14:42:50 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@
 # include <stddef.h>	// size_t
 
 typedef void *	(*t_lmt_iterator_next)(void *element);
+typedef void *	(*t_lmt_iterator_for_each_get_input)(void *element);
 typedef void	(*t_lmt_iterator_for_each)(void *element);
-typedef void	(*t_lmt_iterator_enumerated_for_each)(
+typedef void	(*t_lmt_iterator_for_each_enumerated)(
 		size_t index, void *element);
 
 ///	- properties:
@@ -25,21 +26,23 @@ typedef void	(*t_lmt_iterator_enumerated_for_each)(
 ///		- last: optional
 typedef struct s_lmt_iterator
 {
-	void				*first;
-	void				*last;
-	t_lmt_iterator_next	next;
+	void								*first;
+	void								*last;
+	t_lmt_iterator_next					next;
+	t_lmt_iterator_for_each_get_input	get_input;
 }	t_lmt_iterator;
 
 ///	- type function
 t_lmt_iterator	*lmt_iterator_new(void *first, void *last,
-					t_lmt_iterator_next next);
+					t_lmt_iterator_next next,
+					t_lmt_iterator_for_each_get_input get_input);
 void			lmt_iterator_free(t_lmt_iterator *iter);
 
 ///	- for each function: Don't free element or move position of element
 ///		in the function.
 void			lmt_iterator_for_each(t_lmt_iterator *iter,
 					t_lmt_iterator_for_each function);
-void			lmt_iterator_enumerated_for_each(t_lmt_iterator *iter,
-					t_lmt_iterator_enumerated_for_each function);
+void			lmt_iterator_for_each_enumerated(t_lmt_iterator *iter,
+					t_lmt_iterator_for_each_enumerated function);
 
 #endif
