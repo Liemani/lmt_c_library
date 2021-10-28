@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:47:26 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/27 21:03:14 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/28 12:07:42 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ typedef void	(*t_lmt_iterator_for_each)(void *element);
 typedef void	(*t_lmt_iterator_enumerated_for_each)(
 		size_t index, void *element);
 
+///	- properties:
+///		- first: optional
+///		- last: optional
 typedef struct s_lmt_iterator
 {
 	void				*first;

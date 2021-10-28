@@ -6,7 +6,7 @@
 #    By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/14 15:06:42 by jeonpark          #+#    #+#              #
-#    Updated: 2021/10/27 21:54:52 by jeonpark         ###   ########.fr        #
+#    Updated: 2021/10/28 12:28:45 by jeonpark         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,9 @@ SRCS				:= \
 					   lmt_io/lmt_write.c \
 					   lmt_iterator/t_lmt_iterator_method.c \
 					   lmt_iterator/t_lmt_iterator_type.c \
+					   lmt_list/t_lmt_list_ask.c \
+					   lmt_list/t_lmt_list_constructor.c \
+					   lmt_list/t_lmt_list_destructor.c \
 					   lmt_primitive_type/lmt_atoi.c \
 					   lmt_primitive_type/lmt_atol.c \
 					   lmt_primitive_type/lmt_atoui.c \
@@ -50,6 +53,7 @@ ABSTRACT_INCLUDE	:= \
 					   lmt_fcntl \
 					   lmt_io \
 					   lmt_iterator \
+					   lmt_list \
 					   lmt_primitive_type \
 					   lmt_string \
 					   .
