@@ -6,14 +6,13 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 13:32:40 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/05 13:48:41 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/28 15:55:03 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stddef.h>
-#include <sys/types.h>
-#include <stdlib.h>
+#include <sys/types.h>	// ssize_t
+#include <unistd.h>	// read()
+#include <stdlib.h>	// exit(), size_t
 #include "lmt_io.h"
 
 ssize_t	lmt_read(int fd, void *buffer, size_t size)
@@ -22,6 +21,6 @@ ssize_t	lmt_read(int fd, void *buffer, size_t size)
 
 	reads_len = read(fd, buffer, size);
 	if (reads_len == -1)
-		exit(1);
+		exit(0);
 	return (reads_len);
 }

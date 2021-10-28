@@ -6,13 +6,13 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 14:38:42 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/05 13:48:20 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/28 15:55:47 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <sys/types.h>
-#include <stdlib.h>
+#include <sys/types.h>	// ssize_t
+#include <unistd.h>	// write()
+#include <stdlib.h>	// exit()
 #include "lmt_io.h"
 
 void	lmt_put_ch(const char ch)
@@ -21,5 +21,5 @@ void	lmt_put_ch(const char ch)
 
 	return_value = write(1, &ch, 1);
 	if (return_value == -1)
-		exit(1);
+		exit(0);
 }

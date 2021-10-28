@@ -6,15 +6,13 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 19:09:47 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/05 13:43:19 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/28 15:51:15 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stdlib.h>	// malloc(), exit(), size_t, NULL
 #include "lmt_alloc.h"
 #include "lmt_constant.h"
-
-//	stdlib.h: malloc(), exit(), size_t, NULL
 
 void	*lmt_alloc(size_t size)
 {
@@ -22,6 +20,6 @@ void	*lmt_alloc(size_t size)
 
 	p_address = malloc(size);
 	if (p_address == NULL)
-		exit(1);
+		exit(0);
 	return (p_address);
 }

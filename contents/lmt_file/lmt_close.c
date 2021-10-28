@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lmt_fcntl.h                                        :+:      :+:    :+:   */
+/*   lmt_close.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 15:33:29 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/11 20:03:57 by jeonpark         ###   ########.fr       */
+/*   Created: 2021/10/09 15:33:30 by jeonpark          #+#    #+#             */
+/*   Updated: 2021/10/28 16:03:04 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LMT_FCNTL_H
-# define LMT_FCNTL_H
+#include <unistd.h>	// lmt_close()
+#include <stdlib.h>	// exit()
+#include "lmt_file.h"
 
-# include <fcntl.h>	// mode_t
-
-void	lmt_close(int fd);
-
-#endif
+void	lmt_close(int fd)
+{
+	if (close(fd) == -1)
+		exit(0);
+}
