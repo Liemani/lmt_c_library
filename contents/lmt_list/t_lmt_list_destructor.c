@@ -6,14 +6,15 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 12:27:10 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/28 12:27:15 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/28 13:15:25 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>	// free()
+#include "t_lmt_list.h"
 
 void	lmt_list_free_element(t_lmt_list *element,
-		t_lmt_list_free_content *free_content)
+		t_lmt_list_free_content free_content)
 {
 	if (element == NULL)
 		return ;
@@ -23,7 +24,7 @@ void	lmt_list_free_element(t_lmt_list *element,
 }
 
 void	lmt_list_free(t_lmt_list *dummy,
-		t_lmt_list_free_content *free_content)
+		t_lmt_list_free_content free_content)
 {
 	t_lmt_list	*element;
 	t_lmt_list	*next;

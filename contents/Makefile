@@ -6,7 +6,7 @@
 #    By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/14 15:06:42 by jeonpark          #+#    #+#              #
-#    Updated: 2021/10/28 12:28:45 by jeonpark         ###   ########.fr        #
+#    Updated: 2021/10/28 14:48:44 by jeonpark         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,8 @@ SRCS				:= \
 					   lmt_list/t_lmt_list_ask.c \
 					   lmt_list/t_lmt_list_constructor.c \
 					   lmt_list/t_lmt_list_destructor.c \
+					   lmt_list/t_lmt_list_method.c \
+					   lmt_list/t_lmt_list_protocol_iterator.c \
 					   lmt_primitive_type/lmt_atoi.c \
 					   lmt_primitive_type/lmt_atol.c \
 					   lmt_primitive_type/lmt_atoui.c \
