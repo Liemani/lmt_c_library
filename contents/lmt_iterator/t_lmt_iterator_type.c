@@ -6,13 +6,13 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:47:27 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/28 14:28:41 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/30 16:49:44 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>	// free()
 #include "t_lmt_iterator.h"
-#include "lmt_c_library.h"	// lmt_alloc()
+#include "lmt_alloc.h"
 
 static void	*identity_function(void *input)
 {

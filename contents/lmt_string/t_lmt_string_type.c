@@ -6,16 +6,14 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 17:02:54 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/27 14:27:55 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/30 16:21:39 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stdlib.h>	// free(), NULL
 #include "t_lmt_string.h"
 #include "lmt_alloc.h"
 #include "lmt_primitive_type.h"
-
-//	stdlib.h: free()
 
 static t_lmt_string	*lmt_string_alloc(void)
 {

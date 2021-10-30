@@ -6,13 +6,12 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 23:19:28 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/27 14:25:35 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/30 15:54:28 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lmt_primitive_type.h"
-#include "lmt_alloc.h"
-#include "lmt_constant.h"
+#include "lmt_alloc.h"	// lmt_alloc()
 
 static unsigned long	lmt_ltoa_devide_10(unsigned long *p_number)
 {

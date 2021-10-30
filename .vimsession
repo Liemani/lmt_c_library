@@ -1339,10 +1339,7 @@ wincmd _ | wincmd |
 vsplit
 wincmd _ | wincmd |
 vsplit
-wincmd _ | wincmd |
-vsplit
-3wincmd h
-wincmd w
+2wincmd h
 wincmd w
 wincmd w
 set nosplitbelow
@@ -1352,10 +1349,9 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 80 + 161) / 322)
-exe 'vert 2resize ' . ((&columns * 80 + 161) / 322)
-exe 'vert 3resize ' . ((&columns * 80 + 161) / 322)
-exe 'vert 4resize ' . ((&columns * 79 + 161) / 322)
+exe 'vert 1resize ' . ((&columns * 107 + 161) / 322)
+exe 'vert 2resize ' . ((&columns * 107 + 161) / 322)
+exe 'vert 3resize ' . ((&columns * 106 + 161) / 322)
 argglobal
 if bufexists("~/git/lmt_c_library/contents/lmt_io/lmt_read.c") | buffer ~/git/lmt_c_library/contents/lmt_io/lmt_read.c | else | edit ~/git/lmt_c_library/contents/lmt_io/lmt_read.c | endif
 setlocal autoindent
@@ -1473,136 +1469,11 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 1 - ((0 * winheight(0) + 55) / 110)
+let s:l = 13 - ((12 * winheight(0) + 55) / 110)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
-lcd ~/git/lmt_c_library
-wincmd w
-argglobal
-if bufexists("~/git/lmt_c_library/contents/lmt_io/lmt_put_ch.c") | buffer ~/git/lmt_c_library/contents/lmt_io/lmt_put_ch.c | else | edit ~/git/lmt_c_library/contents/lmt_io/lmt_put_ch.c | endif
-setlocal autoindent
-setlocal backupcopy=
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal cindent
-setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
-setlocal commentstring=/*%s*/
-setlocal complete=.,w,b,u,t,i
-setlocal completefunc=
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal cursorlineopt=both
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal noexpandtab
-if &filetype != 'c'
-setlocal filetype=c
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=croql
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal formatprg=
-setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=-1
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},0),0],:,0#,!^F,o,O,e
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-setlocal lispwords=
-setlocal nolist
-setlocal makeencoding=
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
-setlocal modeline
-setlocal modifiable
-setlocal nrformats=bin,hex
-set number
-setlocal number
-setlocal numberwidth=4
-setlocal omnifunc=ccomplete#Complete
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norelativenumber
-setlocal noscrollbind
-setlocal scrolloff=-1
-setlocal shiftwidth=4
-setlocal noshortname
-setlocal showbreak=
-setlocal sidescrolloff=-1
-setlocal signcolumn=auto
-setlocal smartindent
-setlocal softtabstop=0
-setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal statusline=
-setlocal suffixesadd=
-setlocal swapfile
-setlocal synmaxcol=3000
-if &syntax != 'c'
-setlocal syntax=c
-endif
-setlocal tabstop=4
-setlocal tagcase=
-setlocal tagfunc=
-setlocal tags=
-setlocal termwinkey=
-setlocal termwinscroll=10000
-setlocal termwinsize=
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal undolevels=-123456
-setlocal wincolor=
-setlocal nowinfixheight
-setlocal nowinfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-silent! normal! zE
-1,12fold
-let s:l = 21 - ((20 * winheight(0) + 55) / 110)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-21
+13
 normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
@@ -1856,10 +1727,9 @@ normal! zt
 normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
-exe 'vert 1resize ' . ((&columns * 80 + 161) / 322)
-exe 'vert 2resize ' . ((&columns * 80 + 161) / 322)
-exe 'vert 3resize ' . ((&columns * 80 + 161) / 322)
-exe 'vert 4resize ' . ((&columns * 79 + 161) / 322)
+exe 'vert 1resize ' . ((&columns * 107 + 161) / 322)
+exe 'vert 2resize ' . ((&columns * 107 + 161) / 322)
+exe 'vert 3resize ' . ((&columns * 106 + 161) / 322)
 tabnext
 edit ~/git/lmt_c_library/contents/lmt_iterator/t_lmt_iterator_type.c
 set splitbelow splitright
@@ -2817,7 +2687,7 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 27
-normal! 08|
+normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
@@ -3408,7 +3278,7 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 26 - ((25 * winheight(0) + 13) / 27)
+let s:l = 26 - ((0 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -3658,11 +3528,11 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 29 - ((28 * winheight(0) + 13) / 27)
+let s:l = 30 - ((29 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-29
+30
 normal! 05|
 lcd ~/git/lmt_c_library
 wincmd w
@@ -3908,7 +3778,7 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 15 - ((14 * winheight(0) + 13) / 27)
+let s:l = 15 - ((0 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -4033,16 +3903,16 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 17 - ((16 * winheight(0) + 13) / 27)
+let s:l = 13 - ((12 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-17
+13
 normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
-if bufexists("~/git/lmt_c_library/contents/lmt_string/t_lmt_string.h") | buffer ~/git/lmt_c_library/contents/lmt_string/t_lmt_string.h | else | edit ~/git/lmt_c_library/contents/lmt_string/t_lmt_string.h | endif
+if bufexists("~/git/lmt_c_library/contents/lmt_primitive_type/lmt_itoa.c") | buffer ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_itoa.c | else | edit ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_itoa.c | endif
 setlocal autoindent
 setlocal backupcopy=
 setlocal nobinary
@@ -4072,8 +3942,8 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal noexpandtab
-if &filetype != 'cpp'
-setlocal filetype=cpp
+if &filetype != 'c'
+setlocal filetype=c
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
@@ -4137,8 +4007,8 @@ setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
-if &syntax != 'cpp'
-setlocal syntax=cpp
+if &syntax != 'c'
+setlocal syntax=c
 endif
 setlocal tabstop=4
 setlocal tagcase=
@@ -4158,12 +4028,12 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 23 - ((8 * winheight(0) + 13) / 27)
+let s:l = 14 - ((13 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-23
-normal! 08|
+14
+normal! 027|
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
@@ -4283,12 +4153,12 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 23 - ((22 * winheight(0) + 13) / 26)
+let s:l = 14 - ((13 * winheight(0) + 13) / 26)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-23
-normal! 0
+14
+normal! 027|
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
@@ -4408,7 +4278,7 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 17 - ((16 * winheight(0) + 13) / 27)
+let s:l = 17 - ((0 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -4908,7 +4778,7 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 40 - ((39 * winheight(0) + 27) / 55)
+let s:l = 40 - ((0 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -5206,15 +5076,15 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-21,23fold
-26,31fold
-34,40fold
-43,46fold
-let s:l = 43 - ((42 * winheight(0) + 55) / 110)
+19,21fold
+24,29fold
+32,38fold
+41,44fold
+let s:l = 44 - ((43 * winheight(0) + 55) / 110)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-43
+44
 normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
@@ -5607,8 +5477,8 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 9
-normal! 039|
-tabnext 1
+normal! 01|
+tabnext 8
 set stal=1
 badd +1 ~/git/lmt_c_library/contents/Makefile
 badd +1 ~/git/lmt_c_library/contents/lmt_alloc/lmt_alloc.c
@@ -5622,7 +5492,7 @@ badd +1 contents/lmt_double_linked_list/t_lmt_double_linked_list_ask.c
 badd +1 contents/lmt_double_linked_list/t_lmt_double_linked_list_method.c
 badd +1 contents/lmt_double_linked_list/t_lmt_double_linked_list_type.c
 badd +1 contents/lmt_fcntl/lmt_close.c
-badd +15 ~/git/lmt_c_library/contents/lmt_io/lmt_put_ch.c
+badd +1 ~/git/lmt_c_library/contents/lmt_io/lmt_put_ch.c
 badd +1 ~/git/lmt_c_library/contents/lmt_io/lmt_read.c
 badd +25 ~/git/lmt_c_library/contents/lmt_io/lmt_write.c
 badd +1 ~/git/lmt_c_library/contents/lmt_iterator/t_lmt_iterator_method.c
@@ -5635,10 +5505,10 @@ badd +1 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_byte_cpy.c
 badd +13 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_is_digit.c
 badd +13 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_is_space.c
 badd +23 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_itoa.c
-badd +23 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_ltoa.c
+badd +1 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_ltoa.c
 badd +29 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_str_ask.c
-badd +17 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_str_count.c
-badd +1 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_str_first_ch.c
+badd +0 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_str_count.c
+badd +2 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_str_first_ch.c
 badd +1 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_str_first_str.c
 badd +1 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_str_last_ch.c
 badd +16 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_str_last_str.c
@@ -5658,7 +5528,7 @@ badd +1 contents/lmt_fcntl/lmt_fcntl.h
 badd +1 ~/git/lmt_c_library/contents/lmt_io/lmt_io.h
 badd +1 ~/git/lmt_c_library/contents/lmt_iterator/t_lmt_iterator.h
 badd +37 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_primitive_type.h
-badd +2 ~/git/lmt_c_library/contents/lmt_string/t_lmt_string.h
+badd +23 ~/git/lmt_c_library/contents/lmt_string/t_lmt_string.h
 badd +1 ~/git/lmt_c_library/contents/lmt_file/lmt_close.c
 badd +46 ~/git/lmt_c_library/contents/lmt_list/t_lmt_list_constructor.c
 badd +1 ~/git/lmt_c_library/README.txt

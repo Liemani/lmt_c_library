@@ -6,13 +6,13 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 12:26:57 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/28 13:33:56 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/30 16:57:32 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "t_lmt_list.h"
 #include "t_lmt_list_inner.h"
-#include "lmt_c_library.h"	// lmt_alloc()
+#include "lmt_alloc.h"
 
 static t_lmt_list	*lmt_list_alloc(void)
 {
