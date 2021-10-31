@@ -6,56 +6,67 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 21:43:14 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/05 13:46:50 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/11/01 13:34:29 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <limits.h>	// LONG_MAX, LONG_MIN
 #include "lmt_primitive_type.h"
 #include "lmt_constant.h"
 
-///	- Assume: reading and writing p_result would be slower than
-///		reading and writing result
-static int	lmt_atol_parse_digit(char *string, long *p_result)
+static int	lmt_atol_positive(const char *str, long *number)
 {
-	long	result;
-
-	while (*string == '0')
-		++string;
-	result = 0;
-	while (lmt_is_digit(*string))
-	{
-		result = result * 10 + (*string - '0');
-		if (result < 0)
-			return (PARSE_FAILURE);
-		++string;
-	}
-	if (*string == '\0')
-	{
-		*p_result = result;
-		return (PARSE_SUCCESS);
-	}
-	else
+	if (*str == '+')
+		++str;
+	if (!lmt_is_digit(*str))
 		return (PARSE_FAILURE);
+	while (*str == '0')
+		++str;
+	*number = 0;
+	while (lmt_is_digit(*str))
+	{
+		if ((LONG_MAX - (*str - '0')) / 10 < *number)
+			return (PARSE_FAILURE);
+		*number = *number * 10 + (*str - '0');
+		++str;
+	}
+	return (PARSE_SUCCESS);
 }
 
-int	lmt_atol(char *string, long *p_result)
+static int	lmt_atol_negative(const char *str, long *number)
 {
-	int		sign;
+	if (*str != '-')
+		return (PARSE_FAILURE);
+	++str;
+	if (!lmt_is_digit(*str))
+		return (PARSE_FAILURE);
+	while (*str == '0')
+		++str;
+	*number = 0;
+	while (lmt_is_digit(*str))
+	{
+		if (*number < (LONG_MIN + (*str - '0')) / 10)
+			return (PARSE_FAILURE);
+		*number = *number * 10 - (*str - '0');
+		++str;
+	}
+	return (PARSE_SUCCESS);
+}
 
-	if (*string == '\0')
-		return (PARSE_FAILURE);
-	while (lmt_is_space(*string))
-		++string;
-	sign = 1 - (*string == '-') * 2;
-	if (*string == '-' || *string == '+')
-		++string;
-	if (!lmt_is_digit(*string))
-		return (PARSE_FAILURE);
-	if (lmt_atol_parse_digit(string, p_result) == PARSE_FAILURE)
-		return (PARSE_FAILURE);
+int	lmt_atol(const char *str, long *number)
+{
+	long	temp_number;
+
+	if (*str == '-')
+	{
+		if (lmt_atol_negative(str, &temp_number) != PARSE_SUCCESS)
+			return (PARSE_FAILURE);
+	}
 	else
 	{
-		*p_result = sign * *p_result;
-		return (PARSE_SUCCESS);
+		if (lmt_atol_positive(str, &temp_number) != PARSE_SUCCESS)
+			return (PARSE_FAILURE);
 	}
+	*number = temp_number;
+	return (PARSE_SUCCESS);
 }

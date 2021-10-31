@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 13:36:41 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/31 21:00:16 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/11/01 13:31:27 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,10 @@
 int		lmt_is_space(char ch);
 int		lmt_is_digit(char ch);
 
-int		lmt_atoi(char *str, int *p_result);
-int		lmt_atol(char *str, long *p_result);
-int		lmt_atoui(char *str, unsigned int *p_result);
+///	- description: convert number until character is digit
+int		lmt_atoi(const char *str, int *number);
+int		lmt_atol(const char *str, long *number);
+int		lmt_atoui(const char *str, unsigned int *number);
 char	*lmt_itoa(int number);
 char	*lmt_ltoa(long number);
 

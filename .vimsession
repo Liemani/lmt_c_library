@@ -396,7 +396,7 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 44 - ((43 * winheight(0) + 55) / 110)
+let s:l = 44 - ((0 * winheight(0) + 55) / 110)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -521,7 +521,7 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 20 - ((4 * winheight(0) + 27) / 55)
+let s:l = 20 - ((0 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1636,7 +1636,7 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 19
-normal! 01|
+normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
@@ -1763,7 +1763,7 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 30
-normal! 01|
+normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
@@ -2015,7 +2015,7 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 19
-normal! 01|
+normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
@@ -2144,7 +2144,7 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 47
-normal! 01|
+normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
@@ -2515,9 +2515,9 @@ exe '16resize ' . ((&lines * 27 + 56) / 113)
 exe 'vert 16resize ' . ((&columns * 80 + 161) / 322)
 exe '17resize ' . ((&lines * 26 + 56) / 113)
 exe 'vert 17resize ' . ((&columns * 80 + 161) / 322)
-exe '18resize ' . ((&lines * 54 + 56) / 113)
+exe '18resize ' . ((&lines * 55 + 56) / 113)
 exe 'vert 18resize ' . ((&columns * 79 + 161) / 322)
-exe '19resize ' . ((&lines * 55 + 56) / 113)
+exe '19resize ' . ((&lines * 54 + 56) / 113)
 exe 'vert 19resize ' . ((&columns * 79 + 161) / 322)
 argglobal
 if bufexists("~/git/lmt_c_library/contents/lmt_primitive_type/lmt_is_digit.c") | buffer ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_is_digit.c | else | edit ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_is_digit.c | endif
@@ -2636,11 +2636,11 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 15 - ((14 * winheight(0) + 7) / 15)
+let s:l = 16 - ((0 * winheight(0) + 7) / 15)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-15
+16
 normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
@@ -2886,12 +2886,17 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 1 - ((0 * winheight(0) + 7) / 15)
+18,34fold
+37,54fold
+57,72fold
+57
+normal! zo
+let s:l = 67 - ((31 * winheight(0) + 7) / 15)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
+67
+normal! 020|
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
@@ -3011,12 +3016,17 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 1 - ((0 * winheight(0) + 7) / 15)
+18,34fold
+37,54fold
+57,72fold
+57
+normal! zo
+let s:l = 67 - ((31 * winheight(0) + 7) / 15)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
+67
+normal! 020|
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
@@ -3261,12 +3271,12 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 14 - ((13 * winheight(0) + 7) / 15)
+let s:l = 1 - ((0 * winheight(0) + 7) / 15)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-14
-normal! 024|
+1
+normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
@@ -3386,11 +3396,11 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 13 - ((12 * winheight(0) + 7) / 14)
+let s:l = 1 - ((0 * winheight(0) + 7) / 14)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-13
+1
 normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
@@ -3636,7 +3646,7 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 15 - ((14 * winheight(0) + 8) / 17)
+let s:l = 15 - ((0 * winheight(0) + 8) / 17)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -3886,12 +3896,12 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 27 - ((9 * winheight(0) + 8) / 17)
+let s:l = 1 - ((0 * winheight(0) + 8) / 17)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-27
-normal! 017|
+1
+normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
 argglobal
@@ -4386,7 +4396,7 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 14 - ((13 * winheight(0) + 13) / 27)
+let s:l = 14 - ((0 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -4511,7 +4521,7 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 17 - ((16 * winheight(0) + 13) / 27)
+let s:l = 17 - ((0 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -4761,11 +4771,11 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 1 - ((0 * winheight(0) + 27) / 54)
+let s:l = 25 - ((24 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
+25
 normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
@@ -4886,7 +4896,7 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 1,12fold
-let s:l = 13 - ((12 * winheight(0) + 27) / 55)
+let s:l = 13 - ((12 * winheight(0) + 27) / 54)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -4894,6 +4904,7 @@ normal! zt
 normal! 0
 lcd ~/git/lmt_c_library
 wincmd w
+5wincmd w
 exe '1resize ' . ((&lines * 15 + 56) / 113)
 exe 'vert 1resize ' . ((&columns * 80 + 161) / 322)
 exe '2resize ' . ((&lines * 15 + 56) / 113)
@@ -4928,9 +4939,9 @@ exe '16resize ' . ((&lines * 27 + 56) / 113)
 exe 'vert 16resize ' . ((&columns * 80 + 161) / 322)
 exe '17resize ' . ((&lines * 26 + 56) / 113)
 exe 'vert 17resize ' . ((&columns * 80 + 161) / 322)
-exe '18resize ' . ((&lines * 54 + 56) / 113)
+exe '18resize ' . ((&lines * 55 + 56) / 113)
 exe 'vert 18resize ' . ((&columns * 79 + 161) / 322)
-exe '19resize ' . ((&lines * 55 + 56) / 113)
+exe '19resize ' . ((&lines * 54 + 56) / 113)
 exe 'vert 19resize ' . ((&columns * 79 + 161) / 322)
 tabnext
 edit ~/git/lmt_c_library/contents/lmt_string/lmt_string_static_constructor.c
@@ -5085,12 +5096,12 @@ silent! normal! zE
 1,12fold
 20,22fold
 25,33fold
-let s:l = 31 - ((30 * winheight(0) + 27) / 55)
+let s:l = 24 - ((23 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-31
-normal! 01|
+24
+normal! 0
 lcd ~/git/lmt_c_library/contents
 wincmd w
 argglobal
@@ -5217,7 +5228,7 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 4
-normal! 01|
+normal! 0
 lcd ~/git/lmt_c_library/contents
 wincmd w
 argglobal
@@ -5347,7 +5358,7 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 125
-normal! 01|
+normal! 0
 lcd ~/git/lmt_c_library/contents
 wincmd w
 argglobal
@@ -5741,7 +5752,7 @@ exe s:l
 normal! zt
 9
 normal! 0
-tabnext 1
+tabnext 5
 set stal=1
 badd +1 ~/git/lmt_c_library/contents/main.c
 badd +1 contents/lmt_alloc/lmt_alloc.c
@@ -5767,7 +5778,7 @@ badd +1 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_byte_ask.c
 badd +1 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_byte_cpy.c
 badd +13 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_is_digit.c
 badd +13 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_is_space.c
-badd +13 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_itoa.c
+badd +0 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_itoa.c
 badd +15 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_ltoa.c
 badd +15 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_str_ask.c
 badd +1 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_str_count.c
@@ -5794,7 +5805,7 @@ badd +37 ~/git/lmt_c_library/contents/lmt_primitive_type/lmt_primitive_type.h
 badd +4 ~/git/lmt_c_library/contents/lmt_string/t_lmt_string.h
 badd +1 ~/git/lmt_c_library/contents/lmt_iterator/lmt_iterator_type.c
 badd +1 ~/git/lmt_c_library/contents/lmt_list/lmt_list_static_constructor.c
-badd +4 ~/git/lmt_c_library/contents/lmt_string/t_lmt_string_static_constructor.c
+badd +1 ~/git/lmt_c_library/contents/lmt_string/lmt_string_static_constructor.c
 badd +1 ~/git/lmt_c_library/README.txt
 badd +1 ~/git/lmt_c_library/contents/Makefile
 badd +1 ~/git/lmt_c_library/contents/lmt_iterator/lmt_iterator_method.c
@@ -5806,6 +5817,11 @@ badd +1 ~/git/lmt_c_library/contents/lmt_list/lmt_list_method.c
 badd +1 ~/git/lmt_c_library/contents/lmt_list/lmt_list_protocol_iterator.c
 badd +1 ~/git/lmt_c_library/contents/lmt_list/lmt_list.h
 badd +1 ~/git/lmt_c_library/contents/lmt_list/lmt_list_static.h
+badd +1 ~/git/lmt_c_library/contents/lmt_string/lmt_string_type.c
+badd +1 ~/git/lmt_c_library/contents/lmt_string/lmt_string_method.c
+badd +1 ~/git/lmt_c_library/contents/lmt_string/lmt_string.h
+badd +1 ~/git/lmt_c_library/contents/lmt_string/lmt_string_static.h
+badd +4 ~/git/lmt_c_library/contents/lmt_string/t_lmt_string_static_constructor.c
 badd +14 ~/git/lmt_c_library/contents/lmt_string/t_lmt_string_static.h
 badd +4 ~/git/lmt_c_library/contents/lmt_list/t_lmt_list_static_constructor.c
 badd +1 ~/git/lmt_c_library/contents/lmt_list/t_lmt_list_constructor.c
@@ -5920,11 +5936,6 @@ badd +1 ~/git/lmt_c_library/main.c
 badd +1 ~/git/lmt_c_library/contents/lmt_double_linked_list/t_lmt_double_linked_list_ask.c
 badd +1 ~/git/lmt_c_library/..
 badd +14 ~/git/lmt_c_library/contents/lmt_list/t_lmt_list_inner_constructor.c
-badd +0 ~/git/lmt_c_library/contents/lmt_string/lmt_string.h
-badd +0 ~/git/lmt_c_library/contents/lmt_string/lmt_string_static.h
-badd +0 ~/git/lmt_c_library/contents/lmt_string/lmt_string_static_constructor.c
-badd +0 ~/git/lmt_c_library/contents/lmt_string/lmt_string_type.c
-badd +0 ~/git/lmt_c_library/contents/lmt_string/lmt_string_method.c
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
