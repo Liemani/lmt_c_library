@@ -6,7 +6,7 @@
 #    By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/14 15:06:42 by jeonpark          #+#    #+#              #
-#    Updated: 2021/10/31 13:58:41 by jeonpark         ###   ########.fr        #
+#    Updated: 2021/10/31 19:15:45 by jeonpark         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,14 +14,14 @@ NAME				:= liblmt_c_library.a
 
 SRCS				:= \
 					   lmt_io/lmt_write.c \
-					   lmt_iterator/t_lmt_iterator_method.c \
-					   lmt_iterator/t_lmt_iterator_type.c \
-					   lmt_list/t_lmt_list_ask.c \
-					   lmt_list/t_lmt_list_constructor.c \
-					   lmt_list/t_lmt_list_destructor.c \
-					   lmt_list/t_lmt_list_method.c \
-					   lmt_list/t_lmt_list_protocol_iterator.c \
-					   lmt_list/t_lmt_list_static_constructor.c \
+					   lmt_iterator/lmt_iterator_method.c \
+					   lmt_iterator/lmt_iterator_type.c \
+					   lmt_list/lmt_list_ask.c \
+					   lmt_list/lmt_list_constructor.c \
+					   lmt_list/lmt_list_destructor.c \
+					   lmt_list/lmt_list_method.c \
+					   lmt_list/lmt_list_protocol_iterator.c \
+					   lmt_list/lmt_list_static_constructor.c \
 					   lmt_primitive_type/lmt_atoi.c \
 					   lmt_primitive_type/lmt_atol.c \
 					   lmt_primitive_type/lmt_atoui.c \
@@ -39,9 +39,9 @@ SRCS				:= \
 					   lmt_primitive_type/lmt_strdup.c \
 					   lmt_primitive_type/lmt_str_ask.c \
 					   lmt_primitive_type/lmt_str_count.c \
-					   lmt_string/t_lmt_string_method.c \
-					   lmt_string/t_lmt_string_static_constructor.c \
-					   lmt_string/t_lmt_string_type.c \
+					   lmt_string/lmt_string_method.c \
+					   lmt_string/lmt_string_static_constructor.c \
+					   lmt_string/lmt_string_type.c \
 
 OBJS				:= $(SRCS:.c=.o)
 

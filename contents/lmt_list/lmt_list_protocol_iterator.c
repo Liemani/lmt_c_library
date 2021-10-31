@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_lmt_list_protocol_iterator.c                     :+:      :+:    :+:   */
+/*   lmt_list_protocol_iterator.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 13:06:54 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/31 16:19:03 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/31 19:26:34 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "t_lmt_list.h"
-#include "t_lmt_iterator.h"
+#include "lmt_list.h"
+#include "lmt_iterator.h"
 #include "lmt_constant.h"	// NORMAL, ERROR
 
 static void	*lmt_list_next(void *element)

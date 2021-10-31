@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_lmt_string_method.c                              :+:      :+:    :+:   */
+/*   lmt_string_method.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 17:02:53 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/31 14:15:35 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/31 19:28:28 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>	// malloc(), free(), NULL, size_t
-#include "t_lmt_string.h"
-#include "t_lmt_string_static.h"
+#include "lmt_string.h"
+#include "lmt_string_static.h"
 #include "lmt_primitive_type.h"
 #include "lmt_constant.h"	// NORMAL, ERROR
 

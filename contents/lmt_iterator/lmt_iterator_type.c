@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_lmt_iterator.c                                   :+:      :+:    :+:   */
+/*   lmt_iterator.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:47:27 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/31 11:43:32 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/31 19:30:25 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>	// malloc(), free(), NULL
-#include "t_lmt_iterator.h"
+#include "lmt_iterator.h"
 
 static void	*identity_function(void *input)
 {

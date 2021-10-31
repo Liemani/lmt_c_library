@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_lmt_list_constructor.c                           :+:      :+:    :+:   */
+/*   lmt_string_static.h                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/28 12:26:57 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/31 11:51:12 by jeonpark         ###   ########.fr       */
+/*   Created: 2021/10/31 13:33:13 by jeonpark          #+#    #+#             */
+/*   Updated: 2021/10/31 19:29:11 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>	// NULL
-#include "t_lmt_list.h"
-#include "t_lmt_list_static.h"
+#ifndef LMT_STRING_STATIC_H
+# define LMT_STRING_STATIC_H
 
-t_lmt_list	*lmt_list_new(void)
-{
-	t_lmt_list	*dummy;
+# include "lmt_string.h"
 
-	dummy = lmt_list_new_static(NULL);
-	if (dummy == NULL)
-		return (NULL);
-	dummy->prev = dummy;
-	dummy->next = dummy;
-	return (dummy);
-}
+t_lmt_string	*lmt_string_alloc(void);
+int				lmt_string_init(t_lmt_string *string, const char *str);
+
+#endif

@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_lmt_list_destructor.c                            :+:      :+:    :+:   */
+/*   lmt_list_destructor.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 12:27:10 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/31 11:58:08 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/31 19:27:08 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>	// free(), NULL
-#include "t_lmt_list.h"
+#include "lmt_list.h"
 
 void	lmt_list_free_element(t_lmt_list *element,
 		t_lmt_list_free_content free_content)

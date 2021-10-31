@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_lmt_string.h                                     :+:      :+:    :+:   */
+/*   lmt_string.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 17:02:52 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/31 13:36:57 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/31 19:28:57 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef T_LMT_STRING_H
-# define T_LMT_STRING_H
+#ifndef LMT_STRING_H
+# define LMT_STRING_H
 
 # include <stddef.h>	// size_t
 
@@ -25,7 +25,7 @@ typedef struct s_lmt_string
 
 ///	type function
 t_lmt_string	*lmt_string_new(const char *value);
-void			lmt_string_free(t_lmt_string *p_lmt_string);
+void			lmt_string_free(t_lmt_string *string);
 
 ///	method
 t_lmt_string	*lmt_string_split(t_lmt_string *string, char *separator);

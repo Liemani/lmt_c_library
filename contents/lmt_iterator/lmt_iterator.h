@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_lmt_iterator.h                                   :+:      :+:    :+:   */
+/*   lmt_iterator.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:47:26 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/31 16:04:39 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/31 19:29:47 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef T_LMT_ITERATOR_H
-# define T_LMT_ITERATOR_H
+#ifndef LMT_ITERATOR_H
+# define LMT_ITERATOR_H
 
 # include <stddef.h>	// size_t
 

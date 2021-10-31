@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_lmt_iterator_method.c                            :+:      :+:    :+:   */
+/*   lmt_iterator_method.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 19:09:09 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/31 16:14:03 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/31 19:30:05 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>	// NULL, size_t
-#include "t_lmt_iterator.h"
+#include "lmt_iterator.h"
 #include "lmt_constant.h"	// NORMAL, ERROR
 
 int	lmt_iterator_for_each(t_lmt_iterator *iter,

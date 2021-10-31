@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_lmt_list_static_constructor.c                    :+:      :+:    :+:   */
+/*   lmt_list_static_constructor.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 11:05:28 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/31 14:12:11 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/31 19:30:58 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>	// malloc()
-#include "t_lmt_list_static.h"
-#include "t_lmt_list.h"
+#include "lmt_list_static.h"
+#include "lmt_list.h"
 
 static t_lmt_list	*lmt_list_alloc(void)
 {
