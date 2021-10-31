@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 13:54:33 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/28 16:05:25 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/31 16:16:17 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,7 @@ void		lmt_list_free(t_lmt_list *list,
 void		lmt_list_append(t_lmt_list *list, void *content);
 void		lmt_list_iterate_for_each(t_lmt_list *dummy,
 				t_lmt_iterator_for_each function);
+void		lmt_list_for_each_enumerated(t_lmt_list *dummy,
+				t_lmt_iterator_for_each_enumerated function);
 
 #endif
