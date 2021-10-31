@@ -6,13 +6,12 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:47:27 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/30 16:49:44 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/31 11:43:32 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>	// free()
+#include <stdlib.h>	// malloc(), free(), NULL
 #include "t_lmt_iterator.h"
-#include "lmt_alloc.h"
 
 static void	*identity_function(void *input)
 {
@@ -21,10 +20,11 @@ static void	*identity_function(void *input)
 
 static t_lmt_iterator	*lmt_iterator_alloc(void)
 {
-	return (lmt_alloc(sizeof(t_lmt_iterator)));
+	return (malloc(sizeof(t_lmt_iterator)));
 }
 
-static void	lmt_iterator_init(t_lmt_iterator *iter, void *first, void *last,
+static void	lmt_iterator_init(t_lmt_iterator *iter,
+		void *first, void *last,
 		t_lmt_iterator_next next)
 {
 	iter->first = first;
@@ -38,7 +38,11 @@ t_lmt_iterator	*lmt_iterator_new(void *first, void *last,
 {
 	t_lmt_iterator	*iter;
 
+	if ((first == NULL && last != NULL) || !(next != NULL))
+		return (NULL);
 	iter = lmt_iterator_alloc();
+	if (iter == NULL)
+		return (NULL);
 	lmt_iterator_init(iter, first, last, next);
 	if (get_input != NULL)
 		iter->get_input = get_input;

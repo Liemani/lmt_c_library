@@ -6,12 +6,13 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 23:19:28 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/30 15:46:26 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/31 14:14:21 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>	// malloc(), NULL
 #include "lmt_primitive_type.h"
-#include "lmt_alloc.h"	// lmt_alloc()
+#include "lmt_constant.h"	// MAX_INT_LENGTH
 
 static unsigned int	lmt_itoa_devide_10(unsigned int *p_number)
 {
@@ -32,7 +33,9 @@ char	*lmt_itoa(int number)
 	*p_buffer++ = '0' + (positive_number % 10);
 	while (lmt_itoa_devide_10(&positive_number) != 0)
 		*p_buffer++ = '0' + (positive_number % 10);
-	string = lmt_alloc((number < 0) + (p_buffer - buffer) + 1);
+	string = malloc((number < 0) + (p_buffer - buffer) + 1);
+	if (string == NULL)
+		return (NULL);
 	p_string = string;
 	if (number < 0)
 		*p_string++ = '-';

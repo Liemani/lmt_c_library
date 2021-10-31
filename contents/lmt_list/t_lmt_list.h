@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 13:54:33 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/31 16:16:17 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/31 16:17:51 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@
 typedef void	(*t_lmt_list_free_content)(void *content);
 
 ///	- description: circular double linked list
-///	- content: non-optional except dummy
+///	- property:
+///		- content: non-optional except dummy
+///		- prev: non-optional
+///		- next: non-optional
 typedef struct s_lmt_list
 {
 	void				*content;
@@ -36,10 +39,10 @@ void		lmt_list_free(t_lmt_list *list,
 				t_lmt_list_free_content free_content);
 
 ///	- method
-void		lmt_list_append(t_lmt_list *list, void *content);
-void		lmt_list_iterate_for_each(t_lmt_list *dummy,
+int			lmt_list_append(t_lmt_list *list, void *content);
+int			lmt_list_iterate_for_each(t_lmt_list *dummy,
 				t_lmt_iterator_for_each function);
-void		lmt_list_for_each_enumerated(t_lmt_list *dummy,
+int			lmt_list_iterate_for_each_enumerated(t_lmt_list *dummy,
 				t_lmt_iterator_for_each_enumerated function);
 
 #endif

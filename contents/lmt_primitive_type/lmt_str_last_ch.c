@@ -6,10 +6,11 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 13:51:16 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/27 13:59:35 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/31 13:09:15 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>	// NULL
 #include "lmt_primitive_type.h"
 
 char	*lmt_str_last_ch(char *str, char ch)

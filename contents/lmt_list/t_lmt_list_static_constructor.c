@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_lmt_list_constructor.c                           :+:      :+:    :+:   */
+/*   t_lmt_list_static_constructor.c                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/28 12:26:57 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/31 11:51:12 by jeonpark         ###   ########.fr       */
+/*   Created: 2021/10/31 11:05:28 by jeonpark          #+#    #+#             */
+/*   Updated: 2021/10/31 14:12:11 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>	// NULL
-#include "t_lmt_list.h"
+#include <stdlib.h>	// malloc()
 #include "t_lmt_list_static.h"
+#include "t_lmt_list.h"
 
-t_lmt_list	*lmt_list_new(void)
+static t_lmt_list	*lmt_list_alloc(void)
 {
-	t_lmt_list	*dummy;
+	return (malloc(sizeof(t_lmt_list)));
+}
 
-	dummy = lmt_list_new_static(NULL);
-	if (dummy == NULL)
+static void	lmt_list_init(t_lmt_list *list, void *content)
+{
+	list->content = content;
+}
+
+t_lmt_list	*lmt_list_new_static(void *content)
+{
+	t_lmt_list	*list;
+
+	list = lmt_list_alloc();
+	if (list == NULL)
 		return (NULL);
-	dummy->prev = dummy;
-	dummy->next = dummy;
-	return (dummy);
+	lmt_list_init(list, content);
+	return (list);
 }

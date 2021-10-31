@@ -6,16 +6,13 @@
 #    By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/14 15:06:42 by jeonpark          #+#    #+#              #
-#    Updated: 2021/10/30 14:59:47 by jeonpark         ###   ########.fr        #
+#    Updated: 2021/10/31 13:58:41 by jeonpark         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME				:= liblmt_c_library.a
 
 SRCS				:= \
-					   lmt_alloc/lmt_alloc.c \
-					   lmt_file/lmt_close.c \
-					   lmt_io/lmt_read.c \
 					   lmt_io/lmt_write.c \
 					   lmt_iterator/t_lmt_iterator_method.c \
 					   lmt_iterator/t_lmt_iterator_type.c \
@@ -24,6 +21,7 @@ SRCS				:= \
 					   lmt_list/t_lmt_list_destructor.c \
 					   lmt_list/t_lmt_list_method.c \
 					   lmt_list/t_lmt_list_protocol_iterator.c \
+					   lmt_list/t_lmt_list_static_constructor.c \
 					   lmt_primitive_type/lmt_atoi.c \
 					   lmt_primitive_type/lmt_atol.c \
 					   lmt_primitive_type/lmt_atoui.c \
@@ -42,6 +40,7 @@ SRCS				:= \
 					   lmt_primitive_type/lmt_str_ask.c \
 					   lmt_primitive_type/lmt_str_count.c \
 					   lmt_string/t_lmt_string_method.c \
+					   lmt_string/t_lmt_string_static_constructor.c \
 					   lmt_string/t_lmt_string_type.c \
 
 OBJS				:= $(SRCS:.c=.o)
@@ -50,8 +49,6 @@ CC					:= clang
 CFLAG				:= -Wall -Wextra -Werror
 
 ABSTRACT_INCLUDE	:= \
-					   lmt_alloc \
-					   lmt_file \
 					   lmt_io \
 					   lmt_iterator \
 					   lmt_list \

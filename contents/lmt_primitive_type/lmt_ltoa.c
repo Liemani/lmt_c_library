@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lmt_itoa.c                                         :+:      :+:    :+:   */
+/*   lmt_ltoa.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 23:19:28 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/30 15:54:28 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/31 14:15:05 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>	// malloc(), NULL
 #include "lmt_primitive_type.h"
-#include "lmt_alloc.h"	// lmt_alloc()
+#include "lmt_constant.h"	// MAX_LONG_LENGTH
 
 static unsigned long	lmt_ltoa_devide_10(unsigned long *p_number)
 {
@@ -32,7 +33,9 @@ char	*lmt_ltoa(long number)
 	*p_buffer++ = '0' + (positive_number % 10);
 	while (lmt_ltoa_devide_10(&positive_number) != 0)
 		*p_buffer++ = '0' + (positive_number % 10);
-	string = lmt_alloc((number < 0) + (p_buffer - buffer) + 1);
+	string = malloc((number < 0) + (p_buffer - buffer) + 1);
+	if (string == NULL)
+		return (NULL);
 	p_string = string;
 	if (number < 0)
 		*p_string++ = '-';

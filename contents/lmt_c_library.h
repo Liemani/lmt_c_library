@@ -6,15 +6,13 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 13:43:45 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/28 16:02:48 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/31 10:31:07 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LMT_C_LIBRARY_H
 # define LMT_C_LIBRARY_H
 
-# include "lmt_alloc.h"
-# include "lmt_file.h"
 # include "lmt_io.h"
 # include "t_lmt_iterator.h"
 # include "t_lmt_list.h"
