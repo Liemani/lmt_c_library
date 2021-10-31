@@ -6,13 +6,13 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 21:48:39 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/05 13:46:50 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/31 21:00:21 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lmt_primitive_type.h"
 
-int	lmt_is_space(const char ch)
+int	lmt_is_space(char ch)
 {
 	return ((9 <= ch && ch <= 13) || ch == 32);
 }

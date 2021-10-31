@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 13:36:41 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/27 21:31:03 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/10/31 21:00:16 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include <stddef.h>	// size_t
 
-int		lmt_is_space(const char ch);
-int		lmt_is_digit(const char ch);
+int		lmt_is_space(char ch);
+int		lmt_is_digit(char ch);
 
 int		lmt_atoi(char *str, int *p_result);
 int		lmt_atol(char *str, long *p_result);
