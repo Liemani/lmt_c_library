@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 17:02:52 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/31 19:28:57 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/11/01 15:30:05 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stddef.h>	// size_t
 
+///	- description: non-optional
 ///	- property
 ///		- str: non-optional
 typedef struct s_lmt_string
