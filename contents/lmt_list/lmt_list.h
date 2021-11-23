@@ -6,14 +6,14 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 13:54:33 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/31 19:26:16 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/11/23 10:48:14 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LMT_LIST_H
 # define LMT_LIST_H
 
-# include "lmt_iterator.h"	// protocol
+# include "lmt_iterator/lmt_iterator.h"	// protocol
 
 typedef void	(*t_lmt_list_free_content)(void *content);
 

@@ -6,12 +6,12 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 13:06:54 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/31 19:26:34 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/11/23 11:49:08 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lmt_list.h"
-#include "lmt_iterator.h"
+#include "lmt_iterator/lmt_iterator.h"
 #include "lmt_constant.h"	// NORMAL, ERROR
 
 static void	*lmt_list_next(void *element)

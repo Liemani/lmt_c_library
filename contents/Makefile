@@ -6,7 +6,7 @@
 #    By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/14 15:06:42 by jeonpark          #+#    #+#              #
-#    Updated: 2021/10/31 19:15:45 by jeonpark         ###   ########.fr        #
+#    Updated: 2021/11/23 11:46:43 by jeonpark         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,15 +48,7 @@ OBJS				:= $(SRCS:.c=.o)
 CC					:= clang
 CFLAG				:= -Wall -Wextra -Werror
 
-ABSTRACT_INCLUDE	:= \
-					   lmt_io \
-					   lmt_iterator \
-					   lmt_list \
-					   lmt_primitive_type \
-					   lmt_string \
-					   .
-
-INCLUDE				:= $(addprefix -I ,$(ABSTRACT_INCLUDE))
+INCLUDE				:= -I .
 
 LIBRARY				:=
 

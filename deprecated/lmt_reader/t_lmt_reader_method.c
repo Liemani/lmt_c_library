@@ -6,14 +6,14 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/13 12:58:18 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/27 13:49:08 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/11/23 10:48:14 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>	// size_t, NULL
 #include "t_lmt_reader.h"
 #include "lmt_constant.h"
-#include "lmt_primitive_type.h"
+#include "lmt_primitive_type/lmt_primitive_type.h"
 
 /*
 **	Return value:

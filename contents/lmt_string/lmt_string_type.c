@@ -6,13 +6,13 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 17:02:54 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/31 19:28:02 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/11/23 11:51:39 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>	// free()
-#include "lmt_string.h"
 #include "lmt_string_static.h"
+#include "lmt_string.h"
 #include "lmt_constant.h"	// NORMAL, ERROR
 
 t_lmt_string	*lmt_string_new(const char *str)

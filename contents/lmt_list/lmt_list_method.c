@@ -6,12 +6,12 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 14:24:04 by jeonpark          #+#    #+#             */
-/*   Updated: 2021/10/31 19:26:46 by jeonpark         ###   ########.fr       */
+/*   Updated: 2021/11/23 11:48:57 by jeonpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lmt_list.h"
 #include "lmt_list_static.h"
+#include "lmt_list.h"
 #include "lmt_constant.h"	// NORMAL, ERROR
 
 int	lmt_list_append(t_lmt_list *dummy, void *content)
